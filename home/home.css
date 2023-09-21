@@ -1,0 +1,43 @@
+body {
+    background-color: black;
+    margin: 0;
+}
+
+/* BANNER */
+.bannerHome {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* DIVISORIA DO BANNER PRO RESTO */
+.divisoria {
+
+    height: 4em;
+    max-width: 100%;
+    background-color: rgba(255, 183, 0, 0.60);
+}
+
+/* TIPOS/CATEGORIAS*/
+.categorias {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.categorias a {
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 10px;
+    width: 7%;
+    text-align: center;
+}
+
+.categorias a border {
+    width: 30px;
+}
