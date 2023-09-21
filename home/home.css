@@ -1,6 +1,7 @@
 body {
     background-color: black;
     margin: 0;
+    margin-bottom: 1000px;
 }
 
 /* BANNER */
@@ -12,12 +13,20 @@ body {
     margin: 0;
 }
 
-/* DIVISORIA DO BANNER PRO RESTO */
+/* DIVISORIA  */
 .divisoria {
-
     height: 4em;
     max-width: 100%;
-    background-color: rgba(255, 183, 0, 0.60);
+    background-color: #5d1d88;
+    margin: 0;
+}
+
+.lin {
+    margin-top: auto;
+    height: 1em;
+    max-width: 100%;
+    background-color: #5d1d88;
+    margin: 0;
 }
 
 /* TIPOS/CATEGORIAS*/
@@ -26,6 +35,8 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    max-width: 100%;
 }
 .categorias a {
     color: white;
@@ -40,4 +51,30 @@ body {
 
 .categorias a border {
     width: 30px;
+}
+
+/* BOTÕES FIXOS */
+.botaoCarrinho a img{
+    width: 43px;
+    height: 43px;
+    position: fixed;
+    right: 10px;
+    bottom: 70px;
+}
+
+.voltaTopo a img{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 11px;
+    bottom: 20px;
+    transform: rotate(-90deg);
+}
+
+.botaoHome a img{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 61px;
+    bottom: 21px;
 }
