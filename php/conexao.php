@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-class conexao 
+class Conexao 
 {
     public $conn;
 
@@ -10,27 +10,29 @@ class conexao
         try {
             $this->conn = new PDO('pgsql:host=pgsql.projetoscti.com.br; dbname=projetoscti31; user=projetoscti31; password=722317');
             if (empty($this->conn) || $this->conn === false) {
-                throw new Exception("Erro ao conectar ao banco de dados");
+                throw new Exception("");
             }
+
+            return true;
         } catch (Exception $e) {
-            var_dump("ERRO", $e);
-            return [
-                'error' => true,
-                'mensagem' => $e->getMessage()
-            ];
+            return false;
         }
     }    
 
     public function pesquisar($tabela, $condicao = '') {
         try {
-            $sql = "SELECT * FROM $tabela $condicao";
-            $stmt = $this->conn->prepare($sql);
+            $stmt = $this->conn->prepare("SELECT * FROM $tabela $condicao");
             $stmt->execute();
-            $result = $stmt->fetch();
-            if (empty($result) || $result === false) {
-                throw new Exception("Erro ao pesquisar em $tabela");
+            $i = 0;
+            while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                if (empty($result) || $result === false) {
+                    throw new Exception("Erro ao pesquisar em $tabela");
+                }
+                $resultsArray[$i] = $result;
+                $i ++;
             }
-            return $result;
+
+            return $resultsArray;
         } catch (Exception $e) {
             return [
                 'error' => true,
