@@ -1,6 +1,8 @@
 body {
-    background-color: black;
+    background-color: #000000;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     margin-bottom: 1000px;
 }
 
@@ -11,23 +13,17 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
+    margin-bottom: 2%;
 }
 
 /* DIVISORIA  */
-.divisoria {
-    height: 4em;
-    max-width: 100%;
-    background-color: #5d1d88;
-    margin: 0;
+.linha {
+    width: 100%;
+    height: 1px;
+    background-color: #ffb700;
+    margin: 15px;
 }
 
-.lin {
-    margin-top: auto;
-    height: 1em;
-    max-width: 100%;
-    background-color: #5d1d88;
-    margin: 0;
-}
 
 /* TIPOS/CATEGORIAS*/
 .categorias {
@@ -43,7 +39,7 @@ body {
     text-decoration: none;
     border: 2px solid white;
     border-radius: 30px;
-    padding: 10px;
+    padding: 0.5rem 1rem;
     margin: 10px;
     width: 7%;
     text-align: center;
@@ -77,4 +73,190 @@ body {
     position: fixed;
     right: 61px;
     bottom: 21px;
+}
+
+/* PRODUTOS */
+.produtosCarrosselCima {
+    display: flex !important;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+
+.container {
+    width: 400px;
+    height: 450px;
+}
+
+.container .produto {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.container .produto .imagemProduto {
+    width: 350px;
+    height: 200px;
+    margin: auto;
+}
+
+.container .produto .imagemProduto img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.container .produto .valorProduto {
+    color: black;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin: 10px;
+}
+
+.container .produto .descricaoProduto {
+    color: black;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin: 15px;
+}
+
+.container .produto .botaoProduto a {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    border:2px solid #5d1d88;
+    color: #5d1d88;
+    border-radius: 30px;
+    margin: 10px;
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.container .produto .botaoProduto a:hover {
+    background-color: #5d1d88;
+    color: white;
+}
+
+/* PRODUTO 2 */
+.container2 {
+    width: 400px;
+    height: 450px;
+}
+
+.container2 .produto {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.container2 .produto .imagemProduto {
+    width: 350px;
+    height: 200px;
+    margin: auto;
+}
+
+.container2 .produto .imagemProduto img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.container2 .produto .valorProduto {
+    color: black;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin: 10px;
+}
+
+.container2 .produto .descricaoProduto {
+    color: black;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin: 15px;
+}
+
+.container2 .produto .botaoProduto a {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    border:2px solid #5d1d88;
+    color: #5d1d88;
+    border-radius: 30px;
+    margin: 10px;
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.container2 .produto .botaoProduto a:hover {
+    background-color: #5d1d88;
+    color: white;
+}
+
+/* PRODUTO 3 */
+.container3 {
+    width: 400px;
+    height: 450px;
+}
+
+.container3 .produto {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.container3 .produto .imagemProduto {
+    width: 350px;
+    height: 200px;
+    margin: auto;
+}
+
+.container3 .produto .imagemProduto img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.container3 .produto .valorProduto {
+    color: black;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin: 10px;
+}
+
+.container3 .produto .descricaoProduto {
+    color: black;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin: 15px;
+}
+
+.container3 .produto .botaoProduto a {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    border:2px solid #5d1d88;
+    color: #5d1d88;
+    border-radius: 30px;
+    margin: 10px;
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.container3 .produto .botaoProduto a:hover {
+    background-color: #5d1d88;
+    color: white;
 }
