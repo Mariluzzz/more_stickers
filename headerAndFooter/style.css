@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    background-color: black;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #ffb700; /* Cor de fundo da barra */
+}
+
+.navbar {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    background-color: black;
+    margin-left: 100px;
+    float: left;
+}
+
+.search-bar {
+    margin-left: 20px;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 20px;
+    padding: 20px;
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+.nav-item a {
+    color: #000000; 
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s all ease;
+}
+
+.nav-list .nav-item a:hover { 
+    color: #5d1d88; 
+}
+
+.imagens {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.imagens .nav-img a img{
+    float: right;
+}
+/* Estilos para a barra de pesquisa */
+.search-input {
+    padding: 5px;
+    border: none;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.search-button {
+    background-color: #5d1d88; /* Cor do botão de pesquisa */
+    color: white; /* Cor do texto do botão de pesquisa */
+    border: none;
+    border-radius: 30px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.nav-item:hover .submenu {
+    display: block; /* Mostra o submenu quando o item é hover */
+}
+
+/* Estilos para o submenu */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Coloca o submenu abaixo do item "Produtos" */
+    left: 0;
+    background-color: #ffb700;
+    padding: 10px;
+    list-style-type: none;
+    z-index: 1; /* Certifica-se de que o submenu esteja acima do conteúdo */
+}
+
+/* Estilos para os itens do submenu */
+.submenu-item a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
