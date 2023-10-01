@@ -105,8 +105,7 @@ header .barraNavegacao .imagensBarra #sair{
     height: 40px;
 }
 
-
-
+/* RESPONSIVO BARRA DE NAVEGAÇÃO */
 @media (max-width: 768px) {
   header .barraNavegacao .barraPesquisa {
     display: none;
@@ -119,4 +118,144 @@ header .barraNavegacao .imagensBarra #sair{
    header .barraNavegacao .mobile-menu {
     display: block;
   }
+}
+
+/* RODAPE */
+.footerMain { 
+	background-color: #ffb700; 
+	color: #000000; 
+	font-size: 16px; 
+}
+
+.footerMain .footerConteudo { 
+  float: left; 
+  width: 90%; 
+  margin: 0 5%; 
+  padding: 5em 0; 
+}
+
+.container { 
+  float: left; 
+  width: 100%; 
+}
+
+.footerColuna { 
+	width: 100%; 
+	height: auto; 
+	float: left; 
+	margin-bottom: 3em;
+}
+
+.footerColuna ul { 
+  width: 100%; 
+  float: left; 
+  list-style-type: none;
+}
+
+.footerColuna ul li { 
+  padding: 0.2em 0em; 
+}
+
+.footerColuna ul li a { 
+  text-decoration: none; 
+  color: #000000; 
+}
+
+.footerColuna ul li a { 
+  font-size: 16px; 
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.footerColuna ul li a:hover { 
+  color: #5d1d88;
+  font-size: 18px;
+}
+
+.footerColuna .tituloFooter {  
+	font-size: 1.3em; 
+	color: #000000; 
+	padding-bottom: 0.5em; 
+	margin-bottom: 0.5em; 
+	border-bottom: 1px #000000 solid;
+}
+
+.footerColuna p {  
+  color: #000000; 
+  font-size: 16px; 
+  height: 25px; 
+  font-weight: 600;
+} 
+
+.footerDireitos { 
+  background-color: #ffb700; 
+  width: 100%; 
+  float: left; 
+  text-align: center; 
+  padding: 1.5em 0em; 
+}
+
+.footerDireitos p {  
+  font-size: 16px; 
+  font-weight: 600;
+  color: #000000; 
+  height: 20px; 
+}
+
+.footerDireitos .m-b-footer { 
+  margin-bottom: 1%; 
+}
+
+.footerDireitos .by { 
+  font-size: 0.96em; 
+}
+
+.footerDireitos .by a { 
+  color: #000000; 
+  text-decoration: none; 
+}
+
+.footerDireitos .by a:hover { 
+  text-decoration: underline; 
+}
+
+/*Responsivo*/
+/*768PX BREAKPOINT*/
+@media (min-width: 48em){
+
+  .footerColuna { 
+    width: 30%; 
+    margin-right: 5%; 
+    margin-bottom: 0; 
+  }
+
+  .footerColuna:nth-of-type(3n+0){ 
+    margin-right: 0; 
+    border-right: 0;
+  }
+} 
+
+ /* BOTÕES FIXOS */
+ .botaoCarrinho a img{
+  width: 43px;
+  height: 43px;
+  position: fixed;
+  right: 10px;
+  bottom: 70px;
+}
+
+.voltaTopo a img{
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 11px;
+  bottom: 20px;
+}
+
+.botaoHome a img{
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 61px;
+  bottom: 21px;
 }
