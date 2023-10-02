@@ -91,6 +91,10 @@ header .barraNavegacao .barraPesquisa button:hover {
     color: #fff;
 }
 
+header .barraNavegacao .imagensBarra a {
+  text-decoration: none;
+}
+
 header .barraNavegacao .imagensBarra img{
     margin: 10px;
     align-items: center;
