@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="testeretirada.css">
+    <title>Formas de Pagamento</title>
+</head>
+ <!--Classe do Título-->
+ <div class="titulo">
+    <h1>Formas de Pagamento</h1>
+</div>
+<!--Classe das formas de pagamento-->
+<label>Escolha a forma para pagar:</label>
+<div class="escolha-botao">
+    <input type="radio" name="OPCAO" value="pix"> PIX
+    <input type="radio" name="OPCAO" value='cartao'> CARTÃO
+    <input type="radio" name="OPCAO" value='dinheiro'> DINHEIRO
+</div>
+<!--Classe do Form-->
+<form action="" method="post">
+<div class="form">
+    <input type="text"  placeholder="NÚMERO DO CARTÃO" id="cartao">
+    <br><br>
+    <input type="text" placeholder="CVV" id="cvv">
+    <br><br>
+    <input type="text"  placeholder="DATA DE VALIDADE" id="data_validade">
+    <br><br>
+    <label>Valor para Pagar:</label>
+    <!--PHP do valor a pagar-->
+    <br><br>
+    <label>Data do Pagamento:</label>
+    <!--PHP da data de pagamento-->
+    <br><br>
+    <!--Obsevação do usuário-->
+    <textarea id="obsevacao" rows="4" cols="50" placeholder="Alguma observação? Escreva aqui:"></textarea>
+    <br><br>
+</div>
+<!--Classe dos Botões VOLTAR E AVANÇAR-->
+<div class="botoes">
+
+<div id="bAvancar">
+    <a href="">Avançar</a>
+</div>
+
+<div id="bVoltar">
+        <a href="Retirada.html" >Voltar</a>
+</div>
+</div>
+</body>
+</html>

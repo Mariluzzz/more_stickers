@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="Pagamento.css">
+</head>
+<body>
+        <!--Classe do Título-->
+        <div class="titulo">
+            <h1>Pagamento</h1>
+        </div>
+        <!--Classe da Imagem-->
+        <div class="imagem">
+            <img src="comprar_sacolinha.png" alt="">
+        </div>
+        <!--Classe do Form-->
+<form action="php-TelaPagamento.php" method="post">
+        <div class="form">
+            <input type="text" class="info" placeholder="Nome Completo" id="nome">
+            <br><br>
+            <input type="text"  class="info" placeholder="CPF/CNPJ" id="cpf">
+            <br><br>
+            <input type="email" class="info" placeholder="E-mail" id="email" >
+            <br><br>
+            <input type="text" class="info" placeholder="Celular" id="celular">
+            <br><br>
+            <input type="date" class="info" id="dtnascimento">
+            <br><br>
+        </div>
+</form>
+<!--Classe dos Botões VOLTAR E AVANÇAR-->
+<div class="botoes">
+
+    <div id="bAvancar">
+        <a href="Retirada.html">Avançar</a>
+    </div>
+
+    <div id="bVoltar">
+        <a href="">Voltar</a>
+    </div>
+     </div>
+</body>
+</html>
