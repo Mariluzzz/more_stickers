@@ -1,0 +1,63 @@
+body {
+    background-color: black;
+    color: white;
+    text-align: justify; /* Remova as aspas duplas */
+    margin: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#titulo {
+    font-size: 22px;
+}
+
+#titulo2 {
+    font-size: 18px;
+}
+
+.imgmissao,
+.imgvalores {
+    margin: 10px;
+}
+
+.imgvisao {
+    margin: 5px;
+}
+
+
+.perfis img {
+    display: block;
+    float: right;
+    clear: right;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+}
+
+.perfis a {
+    display: block;
+    float: right;
+    clear: right;
+    margin-bottom: 10px;
+}
+
+.txtfinal {
+    font-size: 50px;
+}
+
+/* Para alinhar o texto à parte inferior de um elemento, você pode usar outras técnicas, como flexbox ou posicionamento absoluto */
+
+/* #ppimg {
+    border-radius: 50%;
+    float: right;
+    height: 120px;
+    width: 120px;
+    clear: right;
+}
+
+#pptxt {
+    float: right;
+    margin-bottom: 10px;
+    clear: right;
+} */
