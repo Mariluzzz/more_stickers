@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "login.css">
+    <title>Login lindo</title>
+</head>
+
+<body id="divFundo">
+    <center><h1><font color=white>LOGIN</font></h1></center>
+
+        <section>
+            <form method="POST" name="Loginform" action="login.php">
+
+                <div id="divImg"><img src="pessoa.png"></div>
+                        <br>
+
+
+                <div class="divCampos">
+                    <input type="text" name="usuario" placeholder="Nome de Usuário" required>
+                        <br>
+                        <br>
+                    <input type="password" name="senha" id="senha" placeholder="Senha" required>
+
+                <div id="divVersenha">
+                    <button type="button" onclick="mostrarOcultar()" style="background: transparent; border: none; cursor:pointer;">
+                        <img src="olhoaberto.png" height="30px" width="30px" style="margin-right: 50px;">
+                    </button>
+                </div>
+                
+                <script type="text/javascript" src="login.js"></script>
+                </div>
+            </div>
+                        <br>
+                <div id="divForget">
+                    <a href="forget.html">Esqueci a senha</a>
+                </div>
+                        <br>
+                        <br>
+        
+                <button type="submit" name="enviar" id="divEnviar">LOGAR ➜</button>
+
+            </form>
+        </section>
+
+</body>
+</html>
