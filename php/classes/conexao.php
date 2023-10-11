@@ -4,20 +4,16 @@ error_reporting(E_ALL);
 
 class Conexao 
 {
-    public $conn;
+    private $conn;
 
     public function  __construct() {
         try {
-            $this->conn = new PDO('pgsql:host=pgsql.projetoscti.com.br; dbname=projetoscti31; user=projetoscti31; password=722317');
-            if (empty($this->conn) || $this->conn === false) {
-                throw new Exception("");
-            }
-
-            return true;
-        } catch (Exception $e) {
-            return false;
+            $this->conn = new PDO('pgsql:host=pgsql.projetoscti.com.br;dbname=projetoscti31', 'projetoscti31', '722317');
+            echo "Conexão bem-sucedida!";
+        } catch (PDOException $e) {
+            echo "Erro na conexão: " . $e->getMessage();
         }
-    }    
+    } 
 
     public function pesquisar($tabela, $condicao = '') {
         try {
