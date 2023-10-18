@@ -12,7 +12,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    margin: 6.3em;
     margin-bottom: 2%;
     max-width: 100%;
 }
@@ -212,4 +212,13 @@ h2 {
     position: fixed;
     right: 61px;
     bottom: 21px;
+}
+
+#barra {
+    position: fixed;
+    top: 0;
+    left: 0; /* Se você desejar que a div fique no canto esquerdo da página */
+    width: 100%; /* Para ocupar toda a largura da página */
+    background-color: #f0f0f0; /* Cor de fundo da barra, ajuste conforme necessário */
+    /* z-index: 100; Define a camada de sobreposição (pode ser ajustada conforme necessário) */
 }

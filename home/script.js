@@ -1,0 +1,76 @@
+document.addEventListener("DOMContentLoaded", function() {
+    
+    let cabecario = '<!DOCTYPE html>'+
+    '<html lang="pt-br">'+
+    '<head>'+
+        '<link rel="stylesheet" href="style.css">'+
+        '<script type="text/javascript" src="script.js"></script>'+
+    '</head>'+
+    '<body>'+
+        '<div class="barra">'+
+            '<header>'+
+                '<div class="barraNavegacao">'+
+                    '<a href="#"> <img src="../headerAndFooter/imagens/logoBarra.svg" alt="" id="logo"></a>'+
+                    '<div class="barraPesquisa">'+
+                        '<input placeholder="Procurar..." />'+
+                          '<button>'+
+                              'PESQUISAR'+
+                          '</button>'+
+                      '</div>'+
+                    '<nav>' +
+                        '<li> <a href="#"> HOME </a> </li>'+
+                        '<li> <a href="#"> SOBRE </a> </li>'+
+                        '<li> <a href="#"> PRODUTOS </a> </li>'+
+                        '<li> <a href="#"> CONTATO </a> </li>'+
+                    '</nav>'+
+                    '<div class="imagensBarra">'+
+                        '<a href=""> <img src="../headerAndFooter/imagens/carrinho.svg" alt=""> </a>'+
+                        '<a href=""> <img src="../headerAndFooter/imagens/perfil.svg" alt=""> </a>'+
+                        '<a href=""> <img src="../headerAndFooter/imagens/sair.svg" alt="" id="sair"> </a>'+
+                    '</div>'+
+                '</div>'+
+            '</header>'+
+        '</div>'+
+    '</hmtl>';
+
+    let rodape = '<div class="rodape">'+
+    '<footer class="footerMain container">'+
+        '<div class="footerConteudo">'+
+            '<div class="footerColuna">'+
+                '<h3 class="tituloFooter"> Menu </h3>'+
+                '<ul>'+
+                    '<li><a href="#" title="Página Inícial">Página Inícial</a></li>'+
+                    '<li><a href="#" title="Sobre a Empresa">Sobre a Empresa</a></li>'+
+                    '<li><a href="#" title="Galeria de Fotos">Produtos</a></li>'+
+                    '<li><a href="#" title="Fale Conosco">Contato</a></li>'+
+                    '<li><a href="#" title="Ofertas">Ofertas</a></li>'+
+                '</ul>'+
+            '</div>'+
+            '<div class="footerColuna">'+
+                '<h3 class="tituloFooter">Produtos</h3>'+
+                '<ul>'+
+                    '<li><a href="#" title="Todos">Todos</a></li>'+
+                    '<li><a href="#" title="Jogos">Jogos</a></li>'+
+                    '<li><a href="#" title="Filmes">Filmes</a></li>'+
+                    '<li><a href="#" title="Animes">Animes</a></li>'+
+                    '<li><a href="#" title="Times">Times</a></li>'+
+                    '<li><a href="#" title="Tecnologia">Tecnologia</a></li>'+
+                '</ul>'+
+           '</div>'+
+           ' <div class="footerColuna">'+                 
+                '<h3 class="tituloFooter"> Contato</h3>'+
+                '<p> a+adesivos@gmail.com </p>'+
+                '<p> 14 90000-0000</p>'+
+               ' <p> 14 90000-0000</p>'+       
+            '</div>'+
+            '<div class="clear"></div>'+
+            '<div class="footerDireitos">'+
+                '<p class="m-b-footer"> www.a+adesivos.com.br - 2023, todos os direitos reservados. &copy;</p>'+
+                '<p class="by"> Desenvolvido por: <a href="#" title="Seu nome">Witor Santos.</a></p>'+
+            '</div>' +
+        '</div>' +
+    '</footer>'+
+'</div>';
+    document.getElementById('barra').innerHTML = cabecario
+    document.getElementById('footer').innerHTML = rodape
+});
