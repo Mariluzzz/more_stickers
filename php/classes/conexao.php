@@ -9,9 +9,9 @@ class Conexao
     public function  __construct() {
         try {
             $this->conn = new PDO('pgsql:host=pgsql.projetoscti.com.br;dbname=projetoscti31', 'projetoscti31', '722317');
-            echo "Conexão bem-sucedida!";
+            // echo "Conexï¿½o bem-sucedida!";
         } catch (PDOException $e) {
-            echo "Erro na conexão: " . $e->getMessage();
+            echo "Erro na conexï¿½o: " . $e->getMessage();
         }
     } 
 
