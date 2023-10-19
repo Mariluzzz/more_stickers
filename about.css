@@ -1,11 +1,17 @@
 body {
     background-color: black;
     color: white;
-    text-align: justify; /* Remova as aspas duplas */
-    margin: 0;
-    padding-left: 50px;
-    padding-right: 50px;
+    text-align: justify; 
+    margin: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+    padding: 40px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    border: 1px solid #ffb700;
+    box-shadow: -1px 2px 12px -2px #ffb700;
+    -webkit-box-shadow: -1px 2px 12px -2px #ffb700;
+    -moz-box-shadow: -1px 2px 12px -2px #ffb700;
 }
 
 #titulo {
@@ -19,7 +25,10 @@ body {
 .imgmissao,
 .imgvalores {
     margin: 10px;
+    width: 80px;
+    height: 80px;
 }
+
 
 .imgvisao {
     margin: 5px;
@@ -31,8 +40,8 @@ body {
     float: right;
     clear: right;
     border-radius: 50%;
-    height: 120px;
-    width: 120px;
+    height: 140px;
+    width: 140px;
 }
 
 .perfis a {
@@ -46,7 +55,9 @@ body {
     font-size: 50px;
 }
 
-/* Para alinhar o texto à parte inferior de um elemento, você pode usar outras técnicas, como flexbox ou posicionamento absoluto */
+.introducao{
+    margin-left: 150px;
+}
 
 /* #ppimg {
     border-radius: 50%;
