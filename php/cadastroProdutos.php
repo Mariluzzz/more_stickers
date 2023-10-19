@@ -34,9 +34,9 @@ switch ($acao) {
 
     case 'alterar':
         $campos = ['nome', 'descricao', 'preco', 'categoria', 'qntd', 'situacao'];
-        $valores = [$_POST['nome'], $_POST['desc'], $_POST['preco'], $_POST['qtd'] , $_POST['situacao']];
-
-        $result = $con->alterar('produtos', $campos, $valores, "id".$_POST['id']);
+        $valores = [$_POST['nome'], $_POST['desc'], $_POST['preco'], $_POST['categoria'], $_POST['qtd'] , $_POST['situacao']];
+        $condicao = "id=".$_POST['id'];
+        $result = $con->alterar('produtos', $campos, $valores, $condicao);
         if (!$result) {
             ?>
             <script>

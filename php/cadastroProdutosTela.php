@@ -56,6 +56,7 @@
                     <form action="cadastroProdutos.php" method="POST">
                         <input type="hidden" id="situacao" name="situacao" value="TRUE">
                         <input type="hidden" id="acao" name="acao" value="alterar">
+                        <input type="hidden" id="id" name="id" value="<?php echo $result[0]['id']?>">
                         <label for="imagem">Selecione uma imagem:</label>
                         <img src="../img/addImg.svg">
                         <input type="file" id="imagem" name="imagem"  value="<?php echo $result[0]['imagem']?>">
