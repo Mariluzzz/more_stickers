@@ -4,6 +4,8 @@ require_once 'classes/conexao.php';
 
 $con = new Conexao();
 
+print_r($_POST);
+
 $acao = isset($_POST['acao']) ? $_POST['acao'] : $_GET['acao']; 
 
 switch ($acao) {
@@ -54,7 +56,7 @@ switch ($acao) {
             </script>
             <?php
         }
-        
+
     break;
 }
 

@@ -53,9 +53,9 @@
                 ?>
                 <div>Alteração de produtos</div>
                 <div>
-                    <form action="../php/cadastroProdutos.php" method="POST">
-                        <input type="hidden" id="situacao" value="TRUE">
-                        <input type="hidden" id="acao" value="alterar">
+                    <form action="cadastroProdutos.php" method="POST">
+                        <input type="hidden" id="situacao" name="situacao" value="TRUE">
+                        <input type="hidden" id="acao" name="acao" value="alterar">
                         <label for="imagem">Selecione uma imagem:</label>
                         <img src="../img/addImg.svg">
                         <input type="file" id="imagem" name="imagem"  value="<?php echo $result[0]['imagem']?>">
