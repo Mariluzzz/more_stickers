@@ -3,14 +3,14 @@ document.addEventListener("DOMContentLoaded", function() {
     let cabecario = '<!DOCTYPE html>'+
     '<html lang="pt-br">'+
     '<head>'+
-        '<link rel="stylesheet" href="style.css">'+
+        '<link rel="stylesheet" href="../css/styleBarra.css">'+
         '<script type="text/javascript" src="script.js"></script>'+
     '</head>'+
     '<body>'+
         '<div class="barra">'+
             '<header>'+
                 '<div class="barraNavegacao">'+
-                    '<a href="#"> <img src="../headerAndFooter/imagens/logoBarra.svg" alt="" id="logo"></a>'+
+                    '<a href="#"> <img src="../img/fixos/logoBarra.svg" alt="" id="logo"></a>'+
                     '<div class="barraPesquisa">'+
                         '<input placeholder="Procurar..." />'+
                           '<button>'+
@@ -24,9 +24,9 @@ document.addEventListener("DOMContentLoaded", function() {
                         '<li> <a href="#"> CONTATO </a> </li>'+
                     '</nav>'+
                     '<div class="imagensBarra">'+
-                        '<a href=""> <img src="../headerAndFooter/imagens/carrinho.svg" alt=""> </a>'+
-                        '<a href=""> <img src="../headerAndFooter/imagens/perfil.svg" alt=""> </a>'+
-                        '<a href=""> <img src="../headerAndFooter/imagens/sair.svg" alt="" id="sair"> </a>'+
+                        '<a href=""> <img src="../img/fixos/carrinho.svg" alt=""> </a>'+
+                        '<a href=""> <img src="../img/fixos/perfil.svg" alt=""> </a>'+
+                        '<a href=""> <img src="../img/fixos/sair.svg" alt="" id="sair"> </a>'+
                     '</div>'+
                 '</div>'+
             '</header>'+
