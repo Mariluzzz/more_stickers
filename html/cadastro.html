@@ -12,20 +12,20 @@
                 <img class="img" src="../img/perfil.svg" alt="perfil">
             </div>
             <div>
-                <form action="" class="form_main">
+                <form action="../php/cadastro.php" class="form_main" method="POST">
                     <div class="inputContainer">
-                    <input type="text" class="inputCampos" id="username" placeholder="Nome usuario">
+                    <input type="text" class="inputCampos" id="username" name="username" placeholder="Nome usuario">
                     </div>
                     <div class="inputContainer">
-                        <input type="email" class="inputCampos" id="email" placeholder="Email">
+                        <input type="email" class="inputCampos" id="email" name="email" placeholder="Email">
                     </div>
                     <div class="inputContainer">
-                        <input type="date" class="inputCampos" id="data_nasc" placeholder="Data nascimento">
+                        <input type="date" class="inputCampos" id="data_nasc" name="data_nasc" placeholder="Data nascimento">
                     </div>
                     <div class="inputContainer">
-                        <input type="password" class="inputCampos" id="password" placeholder="Senha">
+                        <input type="password" class="inputCampos" id="password" name="password" placeholder="Senha">
                     </div>   
-                    <button class="button" id="button">Cadastrar</button>
+                    <button type="submit" class="button" id="button">Cadastrar</button>
                     <a class="link" href="../html/login.html">Já possui conta? Click aqui!</a>
                 </form>
             </div>
