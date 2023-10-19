@@ -25,17 +25,17 @@ session_start();
         <!-- Formulário -->
         <div class="forms">
             <form action="processo.php" method="post">
-                <input type="text" class="info" placeholder="Nome Completo" id="nome" name="nome">
+                <input type="text" class="info" placeholder="Nome Completo" id="nome" name="nome" required>
                 <br><br>
-                <input type="text" class="info" placeholder="CPF/CNPJ" id="cpf" name="cpf">
+                <input type="text" class="info" placeholder="CPF/CNPJ" id="cpf" name="cpf" required>
                 <br><br>
-                <input type="email" class="info" placeholder="E-mail" id="email" name="email">
+                <input type="email" class="info" placeholder="E-mail" id="email" name="email" required>
                 <br><br>
-                <input type="text" class="info" placeholder="Celular" id="celular" name="celular">
+                <input type="text" class="info" placeholder="Celular" id="celular" name="celular" required>
                 <br><br>
-                <input type="text" class="info" id="dtnascimento" placeholder="(DD/MM/AAAA)" name="dtnascimento">
+                <input type="text" class="info" id="dtnascimento" placeholder="(DD/MM/AAAA)" name="dtnascimento" required>
                 <br><br>
-                <input type="text" class="info" id="senha" placeholder="Senha" name="senha">
+                <input type="text" class="info" id="senha" placeholder="Senha" name="senha"required>
                 <br><br>
                 <div class='botoes'>
                     <div>

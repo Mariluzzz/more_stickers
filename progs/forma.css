@@ -17,7 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 800px;
+    width: 80%; /* Ajustado para centralizar */
     height: 800px;
     background-color: #181818;
     border: 1px solid #ffb700;
@@ -32,24 +32,24 @@ body {
     color: white;
 }
 
-@media(max-width: 768px) 
-{
- header   {
-    font-size: 24px;
- }
- main{
-    font-size: 16px;
- }
-}
+@media (max-width: 768px) {
+    header {
+        font-size: 24px;
+    }
 
+    main {
+        font-size: 16px;
+    }
+}
 
 .form {
     margin-top: 20px;
 }
 
-.label{
+.label {
     color: white;
 }
+
 .info {
     width: 100%;
     padding: 10px;
@@ -81,27 +81,19 @@ body {
     padding: 0; /* Remove o preenchimento interno */
     cursor: pointer;
     background-color: transparent; /* Define o fundo como transparente para remover qualquer cor de fundo padrão */
-  }
-#bVoltar{
+}
+
+#bVoltar {
     background-image: url('/more_stickers/imgs/icone_AMARELA.png');
     background-size: cover;
-    width: 50px; 
-    height: 50px; 
-    border: none; 
-    padding: 0; 
+    width: 50px;
+    height: 50px;
+    border: none;
+    padding: 0;
     cursor: pointer;
-    background-color: transparent; 
+    background-color: transparent;
 }
-#volta_tudo{
-    background-image: url('/more_stickers/imgs/volta_tudo.png');
-    background-size: cover;
-    width: 50px; 
-    height: 50px; 
-    border: none; 
-    padding: 0; 
-    cursor: pointer;
-    background-color: transparent; 
-}
+
 
 .infoPagamento {
     color: white;
@@ -135,3 +127,4 @@ body {
     margin-left: 10px; /* Espaçamento entre a bolinha e o texto */
     margin-bottom: -1px;
 }
+

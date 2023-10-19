@@ -4,7 +4,7 @@ session_start();
 if (isset($_SESSION['nome'])) {
     $nome = $_SESSION['nome'];
 } else {
-    header("Location: php-Concluido.php");
+    header("Location: Concluido.php");
     exit;
 }
 ?>
@@ -24,7 +24,7 @@ if (isset($_SESSION['nome'])) {
             <h1>Formas de Pagamento</h1>
         </div>
 
-        <form action='php-Concluido.php' method='post'>
+        <form action='Concluido.php' method='post'>
             <div class='escolha-botao'>
                 <div class='escolha-botao'>
                     <input type='radio' name='OPCAO' value='pix' class='radioButton' id='pix'>
@@ -43,6 +43,7 @@ if (isset($_SESSION['nome'])) {
                 <br><br>
                 <input type='text' placeholder='DATA DE VALIDADE' id='data_validade' name='data_validade'>
                 <br><br>
+                
                 <div class='infoPagamento'>
                     <label>Valor para Pagar:</label>
                     <!-- PHP do valor a pagar -->
@@ -55,9 +56,7 @@ if (isset($_SESSION['nome'])) {
                 <br><br>
                 <div class='botoes'>
                     <div id='bVoltar'>
-                    <div>
-                        <input type='submit' value='' id='volta_pagina'>
-                    </div>
+                    <div></div>
                     </div>
                     <div id='bAvancar'>
                         <input type='submit' id='bAvancar' value=''>
@@ -95,7 +94,9 @@ if (isset($_SESSION['nome'])) {
             var year = new Date().getFullYear() + 2;
             return month + '/' + String(year).substr(2);
         }
-    
+        document.getElementById('bVoltar').addEventListener('click', function() {
+            window.location.href = 'Retirada.php';
+        });
 </script>
 </body>
 </html>

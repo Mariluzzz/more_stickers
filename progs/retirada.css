@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #000000;
@@ -7,46 +6,61 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 1500px;
+    min-height: 100vh;
 }
 
 .container {
     margin: 2%;
-    margin-top: 2%;
-    padding: 2%;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 800px;
-    height: 800px;
-    background-color: #181818;
-    border: 1px solid #ffb700;
+    max-width: 100%;
+    border: 1px solid #ffb700; /* Adicione uma borda ao container */
     border-radius: 10px;
-    /* SOMBRAS */
-    -webkit-box-shadow: inset 1px -1px 21px -11px rgba(255,255,255,1);
-    -moz-box-shadow: inset 1px -1px 21px -11px rgba(255,255,255,1);
-    box-shadow: inset 1px -1px 21px -11px rgba(255,255,255,1);
+    box-shadow: inset 1px -1px 21px -11px rgba(255, 255, 255, 1);
+    padding: 2%; /* Adicione um espaçamento interno ao container */
+    box-sizing: border-box; /* Para incluir o espaço de padding nas dimensões do contêiner. */
 }
 
-/*
-Deixa a tela responsiva
-*/
-@media(max-width: 768px) 
-{
- header   {
-    font-size: 24px;
- }
- main{
-    font-size: 16px;
- }
+/* Deixa a tela responsiva */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .titulo {
+        font-size: 24px;
+    }
+
+    .saudacao {
+        font-size: 16px;
+    }
+
+    .info {
+        width: 90%; /* Reduza a largura dos elementos .info em telas menores. */
+        padding: 2%; /* Adicione um espaço de padding dentro dos elementos .info */
+        border-radius: 10px; /* Ajuste o raio da borda para 10px. */
+    }
+    .infoPagamento, .escolha-botao {
+        font-size: 14px;
+    }
+    .botoes {
+        flex-direction: column; /* Altere a direção dos botões em telas menores. */
+        align-items: center; /* Centralize os botões na vertical. */
+        margin-top: 10px; /* Reduza o espaço superior dos botões. */
+    }
+    .radioButton + label::before {
+        width: 8px; /* Reduza o tamanho das bolinhas dos radio buttons. */
+        height: 8px;
+    }
 }
 
 .titulo {
     color: white;
 }
 
-.saudacao{
+.saudacao {
     color: white;
 }
 
@@ -56,18 +70,20 @@ Deixa a tela responsiva
 
 .info {
     width: 100%;
-    padding: 10px;
+    padding: 2%; /* Adicione um espaço de padding dentro dos elementos .info */
     border: 2px solid #5d1d88;
-    border-radius: 30px;
     margin: 5px 0;
+    box-sizing: border-box; /* Para incluir o espaço de padding nas dimensões dos elementos .info. */
+    background-color: #fff; /* Adicione um fundo para destacar os elementos .info. */
 }
 
 .observacao {
     width: 100%;
-    padding: 10px;
+    padding: 2%; /* Adicione um espaço de padding dentro dos elementos .observacao */
     border: 2px solid #5d1d88;
     border-radius: 10px;
     margin: 5px 0;
+    box-sizing: border-box; /* Para incluir o espaço de padding nas dimensões dos elementos .observacao. */
 }
 
 .botoes {
@@ -79,23 +95,25 @@ Deixa a tela responsiva
 #bAvancar input[type="submit"] {
     background-image: url('/more_stickers/imgs/icone_VERDE.png');
     background-size: cover;
-    width: 50px; /* Largura do botão */
-    height: 50px; /* Altura do botão */
-    border: none; /* Remove a borda */
-    padding: 0; /* Remove o preenchimento interno */
+    width: 50px;
+    height: 50px;
+    border: none;
+    padding: 0;
     cursor: pointer;
-    background-color: transparent; /* Define o fundo como transparente para remover qualquer cor de fundo padrão */
-  }
-#bVoltar{
+    background-color: transparent;
+}
+
+#bVoltar {
     background-image: url('/more_stickers/imgs/icone_AMARELA.png');
     background-size: cover;
-    width: 50px; 
-    height: 50px; 
-    border: none; 
-    padding: 0; 
+    width: 50px;
+    height: 50px;
+    border: none;
+    padding: 0;
     cursor: pointer;
-    background-color: transparent; 
+    background-color: transparent;
 }
+
 .infoPagamento {
     color: white;
 }
@@ -104,28 +122,24 @@ Deixa a tela responsiva
     color: white;
 }
 
-/* Defina a cor personalizada para as bolinhas dos radio buttons */
 .radioButton:checked + label::before {
     background-color: #ffb700;
     border: 2px solid #ffb700;
 }
 
-/* Use opacity para ocultar as bolinhas padrão dos radio buttons */
 .radioButton {
     opacity: 0;
     position: absolute;
 }
 
-/* Estilize a bolinha dos radio buttons */
 .radioButton + label::before {
     content: '';
     display: inline-block;
     width: 10px;
     height: 10px;
-    border: 2px solid #ffb700; /* Cor padrão da borda da bolinha */
-    border-radius: 50%; /* Tornar a bolinha circular */
+    border: 2px solid #ffb700;
+    border-radius: 50%;
     margin-right: 5px;
-    margin-left: 10px; /* Espaçamento entre a bolinha e o texto */
+    margin-left: 10px;
     margin-bottom: -1px;
 }
-

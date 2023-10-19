@@ -4,7 +4,7 @@ session_start();
 if (isset($_SESSION['nome'])) {
     $nome = $_SESSION['nome'];
 } else {
-    header('Location: php-FormaPagamento.php');
+    header('Location: FormaPagamento.php');
     exit;
 }
 
@@ -44,8 +44,10 @@ if ($hora_atual >= 6 && $hora_atual < 12) {
             <label for='fisica' class='label'>LOJA FÍSICA</label>
             <input type='radio' name='OPCAO' value='entrega' class='radioButton' id='entrega'>
             <label for='entrega' class='label'>ENTREGA</label>
+            <input type="radio" name='OPCAO' value='gerar' class='radioButton' id='gerar'>
+            <label for="gerar" class='label'>DEMOSTRAÇÃO</label>
         </div>
-        <form action='php-FormaPagamento.php' method='post'>
+        <form action='FormaPagamento.php' method='post'>
             <div class='form'>
                 <input type='text'  placeholder='CEP' id='CEP' class='info'>
                 <br><br>
@@ -65,7 +67,6 @@ if ($hora_atual >= 6 && $hora_atual < 12) {
             </div>
             <div class='botoes'>
                 <div id='bVoltar'>
-                    
                 </div>
                 <div id='bAvancar'>
                     <input type='submit' id='bAvancar' value=''>
@@ -76,6 +77,20 @@ if ($hora_atual >= 6 && $hora_atual < 12) {
     </form>
 </body>
 </html>
+<script>
+        document.getElementById('gerar').addEventListener('click', function() {
+            // Gere valores aleatórios fictícios
+            document.getElementById('CEP').value = Math.floor(10000000 + Math.random() * 90000000).toString();
+            document.getElementById('numero').value = Math.floor(1 + Math.random() * 1000).toString();
+            const bairros = ["Centro", "Bairro A", "Bairro B", "Bairro C"];
+            const cidades = ["São Paulo", "Rio de Janeiro", "Belo Horizonte", "Porto Alegre"];
+            document.getElementById('bairro').value = bairros[Math.floor(Math.random() * bairros.length)];
+            document.getElementById('cidade').value = cidades[Math.floor(Math.random() * cidades.length)];
+        });
+        document.getElementById('bVoltar').addEventListener('click', function() {
+            window.location.href = 'php-LoginPagamento.php';
+        });
+</script>
 <!--       _
        .__(.)< (MEOW)
         \___)   

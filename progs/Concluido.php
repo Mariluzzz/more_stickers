@@ -27,14 +27,14 @@ if (isset($_SESSION['nome'])) {
             <h1>+ADESIVOS AGRADECE PELA SUA COMPRA, <?php echo strtoupper($nome); ?>!</h1>
         </div>
         <div class='botao'>
-            <form action="php-LoginPagamento.php" method="post">
+            <form action="LoginPagamento.php" method="post">
                 <input type="submit" id='volta_tudo' name="submit_button" value=''>
             </form>
         </div>
     </div>
     <script>
         document.getElementById('volta_tudo').addEventListener('click', function() {
-            window.location.href = "php-LoginPagamento.php";
+            window.location.href = "LoginPagamento.php";
         });
     </script>
 </body>

@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION['nome'] = $nome;
 
     // Redirecionar para a próxima página
-    header("Location: php-Retirada.php");
+    header("Location: Retirada.php");
     exit;
 }
 ?>
