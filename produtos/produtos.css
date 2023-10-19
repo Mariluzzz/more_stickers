@@ -6,6 +6,12 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
 .produtos {
     display: flex;
     flex-wrap: wrap; 
@@ -15,10 +21,11 @@ body {
 .produtos .card {
     background-color: white;
     border-radius: 10px;
-    margin: 80px;
+    margin: 40px;
+    margin-bottom: 80px;
     padding: 10px;
     width: 100%;
-    max-width: 300px;
+    max-width: 220px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,15 +63,46 @@ body {
     background-color: #5d1d88;
 }
 
+.produtos .card {
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.produtos .card:hover{
+    box-shadow: -1px 2px 12px -2px #ee82ee;
+    -webkit-box-shadow: -1px 2px 12px -2px #ee82ee;
+    -moz-box-shadow: -1px 2px 12px -2px #ee82ee;
+    width: 100%;
+    max-width: 250px;
+}
 /* FILTRO */
+.container .filtro, .filtro .quadradoFiltro {
+    display: flex;
+    justify-content: flex-start;
+    padding: 40px;
+}
+
 .filtro .quadradoFiltro {
     background-color: #181818;
-    width: 200px; 
+    width: 200px;
+    height: 300px; 
     margin: 0 auto; 
     text-align: left; 
     border: 1px solid #ffb700; 
     border-radius: 15px;
     padding: 20px; 
+    box-shadow: -1px 2px 12px -2px #ffb700;
+    -webkit-box-shadow: -1px 2px 12px -2px #ffb700;
+    -moz-box-shadow: -1px 2px 12px -2px #ffb700;
+}
+
+.filtro .quadradoFiltro{    
+    position: fixed;
+    z-index: 1;
+}
+
+.filtro{
+    margin-right: 200px;
 }
 
 .filtro .categorias a {
