@@ -1,0 +1,74 @@
+body {
+    background-color: black;
+    color: white;
+    text-align: justify; 
+    margin: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+    padding: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    border: 1px solid #ffb700;
+    box-shadow: -1px 2px 12px -2px #ffb700;
+    -webkit-box-shadow: -1px 2px 12px -2px #ffb700;
+    -moz-box-shadow: -1px 2px 12px -2px #ffb700;
+}
+
+#titulo {
+    font-size: 22px;
+}
+
+#titulo2 {
+    font-size: 18px;
+}
+
+.imgmissao,
+.imgvalores {
+    margin: 10px;
+    width: 80px;
+    height: 80px;
+}
+
+
+.imgvisao {
+    margin: 5px;
+}
+
+
+.perfis img {
+    display: block;
+    float: right;
+    clear: right;
+    border-radius: 50%;
+    height: 140px;
+    width: 140px;
+}
+
+.perfis a {
+    display: block;
+    float: right;
+    clear: right;
+    margin-bottom: 10px;
+}
+
+.txtfinal {
+    font-size: 50px;
+}
+
+.introducao{
+    margin-left: 150px;
+}
+
+/* #ppimg {
+    border-radius: 50%;
+    float: right;
+    height: 120px;
+    width: 120px;
+    clear: right;
+}
+
+#pptxt {
+    float: right;
+    margin-bottom: 10px;
+    clear: right;
+} */
