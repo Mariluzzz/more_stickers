@@ -5,7 +5,7 @@
     <title>Cadastro de produto</title>
     <style>
         body {
-            background-color: blue;
+            background-color: grey;
         }
     </style>
 </head>

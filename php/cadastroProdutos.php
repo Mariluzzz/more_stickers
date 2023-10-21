@@ -48,7 +48,7 @@ switch ($acao) {
     break;
 
     case 'excluir':
-        $result = $con->alterar('produtos', ['situcao'], ['FALSE'],'id ='.$_GET['id']);
+        $result = $con->excluir('produtos', ['situcao'], ['FALSE'],'id ='.$_GET['id']);
         if(!$result) {
             ?>
             <script>
