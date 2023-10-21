@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
                       '</div>'+
                     '<nav>' +
                         '<li> <a href="../php/home.php"> HOME </a> </li>'+
-                        '<li> <a href="#"> SOBRE </a> </li>'+
+                        '<li> <a href="../html/sobreNos.html"> SOBRE </a> </li>'+
                         '<li>'+
                             '<a id="client" class="button">PRODUTOS</a>'+
                             '<ul>'+
