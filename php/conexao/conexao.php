@@ -19,7 +19,7 @@ function conecta ($params = "") {
 function funcaoLogin ($params, &$admin) {
     $verificaUsuario = pesquisar("usuarios", "where nome_usuario = '{$params['usuario']}' and senha = '{$params['senha']}'");  
     if (empty($verificaUsuario)) {
-        throw new Exception("Usuário não encontrado, favor cadastrar-se :)");
+        return false;
     }
 
     if ($verificaUsuario[0]['admin']) {
@@ -31,7 +31,6 @@ function funcaoLogin ($params, &$admin) {
 
 function DefineCookie($nomeCookie, $nomeUser, $temp) 
 {
-    echo "Cookie: $nomeCookie Valor: $nomeUser";  
     setcookie($nomeCookie, $nomeUser, time() + $temp * 60); 
 }
 
@@ -45,6 +44,7 @@ function pesquisar($tabela, $condicao = '') {
         $i ++;
     }
 
+    $resultsArray = !empty($resultsArray) ? $resultsArray : [];
     return $resultsArray;
 }
 

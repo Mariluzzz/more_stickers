@@ -1,0 +1,131 @@
+.divImg {
+    background-color: #fff;
+    margin: 10px 0 0 0;
+    width: 57%;
+    min-height: 20%;
+    max-height: auto;
+    padding: 17%;
+} 
+
+div button {
+  display: inline-block;
+  outline: none;
+}
+
+h2 {
+  text-align: center;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+}
+
+li {
+  background-color: rgb(104, 5, 161);
+  list-style: none;
+  padding: 5px 0;
+  /* margin: 10px 0 0 0; */
+}
+
+/* :root {
+  --cor-primaria-success: rgb(194, 61, 246);
+  --cor-hover-success: rgb(96, 73, 113);
+  --cor-secundaria-success: rgb(27, 66, 50);
+  
+  --cor-primaria-info: rgb(194, 61, 246);
+  --cor-hover-info: rgb(96, 73, 113);
+  --cor-secundaria-info: rgb(31, 62, 88);
+
+  --cor-primaria-danger: rgb(194, 61, 246);
+  --cor-hover-danger: rgb(96, 73, 113);
+  --cor-secundaria-danger: rgb(58, 22, 22);
+} */
+
+body {
+  margin: 0 10% 0 15%;
+  outline: none;
+  background-color: rgb(104, 5, 161);
+}
+
+.button {
+  border: black;
+  width: 327px;
+  margin: 0 10px 0 10px;
+  background-color: rgb(194, 61, 246);
+  text-decoration: dotted;
+  font-size: 110%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  cursor: pointer;
+  transition: background .3s;
+  border-radius: 4px;
+}
+
+.titulos {
+  text-align: center;
+  padding: 5%;
+  border-radius: 4px;
+  background-color: rgb(206, 120, 241);
+  width: 81%;
+  height: 91%;
+  right: 110%;
+  font-size: 30px;
+  margin: 10px 0 10px 0;
+  outline: none;
+  font-family: 'Times New Roman', Times, serif
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+nav li {
+  color: transparent;
+  outline: none;
+  display: inline-block;
+  position: relative;
+}
+
+nav button {
+  outline: none;
+  display: block;
+  padding: 10px;
+  color: #000;
+  text-decoration: none;
+}
+
+nav ul ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  padding: 0;
+  display: none;
+  outline: none;
+}
+
+nav ul li:hover > ul {
+  display: block;
+  outline: none;
+}
+
+nav ul ul li {
+  display: block;
+  width: 100%;
+  outline: none;
+}
+
+nav ul ul li button {
+  padding: 5px;
+  outline: none;
+}
+
+nav ul ul li button:hover {
+  background-color: #f0f0f0;
+  outline: none;
+}

@@ -1,0 +1,265 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.barra {
+  display: flex;
+  flex-direction: column;
+  background: #000000;
+  min-height: 12.9vh;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background: #ffb700;
+}
+
+header .barraNavegacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 0 2em;
+}
+
+header .barraNavegacao #logo{
+    background-color: #000000;
+}
+
+header .barraNavegacao nav {
+  display: flex;
+  list-style-type: none;
+}
+
+header .barraNavegacao h2 {
+  color: #fff;
+}
+
+header .barraNavegacao nav li a {
+  color: #000000;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+  margin-left: 15px;
+  transition: 0.3s;
+  margin: 25px;
+}
+
+header .barraNavegacao nav li a:hover {
+  color: #5d1d88;
+  margin: 15px;
+}
+
+header .barraNavegacao .barraPesquisa input {
+  background: #ffffff;
+  border: 2px solid #5d1d88;
+  padding: 7px 10px;
+  border-radius: 50px;
+  width: 200px;
+  outline: 0;
+  color: #000000;
+}
+
+header .barraNavegacao .barraPesquisa input::placeholder {
+  color: #999;
+}
+
+header .barraNavegacao .barraPesquisa {
+  display: flex;
+}
+
+header .barraNavegacao .barraPesquisa button {
+  background: #ffffff;
+  color: #5d1d88;
+  border: 2px solid #5d1d88;
+  border-radius: 50px;
+  padding: 7px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  outline: 0;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+header .barraNavegacao .barraPesquisa button:hover {
+    background-color: #5d1d88;
+    color: #fff;
+}
+
+header .barraNavegacao .imagensBarra a {
+  text-decoration: none;
+}
+
+header .barraNavegacao .imagensBarra img{
+    margin: 10px;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+}
+
+header .barraNavegacao .imagensBarra #sair{
+    margin: 10px;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+/* RESPONSIVO BARRA DE NAVEGAÇÃO */
+@media (max-width: 768px) {
+  header .barraNavegacao .barraPesquisa {
+    display: none;
+  }
+  
+  header .barraNavegacao nav {
+    display: none;
+  }
+  
+   header .barraNavegacao .mobile-menu {
+    display: block;
+  }
+}
+
+/* RODAPE */
+.footerMain { 
+	background-color: #ffb700; 
+	color: #000000; 
+	font-size: 16px; 
+}
+
+.footerMain .footerConteudo { 
+  float: left; 
+  width: 90%; 
+  margin: 0 5%; 
+  padding: 5em 0; 
+}
+
+.container { 
+  float: left; 
+  width: 100%; 
+}
+
+.footerColuna { 
+	width: 100%; 
+	height: auto; 
+	float: left; 
+	margin-bottom: 3em;
+}
+
+.footerColuna ul { 
+  width: 100%; 
+  float: left; 
+  list-style-type: none;
+}
+
+.footerColuna ul li { 
+  padding: 0.2em 0em; 
+}
+
+.footerColuna ul li a { 
+  text-decoration: none; 
+  color: #000000; 
+}
+
+.footerColuna ul li a { 
+  font-size: 16px; 
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.footerColuna ul li a:hover { 
+  color: #5d1d88;
+  font-size: 18px;
+}
+
+.footerColuna .tituloFooter {  
+	font-size: 1.3em; 
+	color: #000000; 
+	padding-bottom: 0.5em; 
+	margin-bottom: 0.5em; 
+	border-bottom: 1px #000000 solid;
+}
+
+.footerColuna p {  
+  color: #000000; 
+  font-size: 16px; 
+  height: 25px; 
+  font-weight: 600;
+} 
+
+.footerDireitos { 
+  background-color: #ffb700; 
+  width: 100%; 
+  float: left; 
+  text-align: center; 
+  padding: 1.5em 0em; 
+}
+
+.footerDireitos p {  
+  font-size: 16px; 
+  font-weight: 600;
+  color: #000000; 
+  height: 20px; 
+}
+
+.footerDireitos .m-b-footer { 
+  margin-bottom: 1%; 
+}
+
+.footerDireitos .by { 
+  font-size: 0.96em; 
+}
+
+.footerDireitos .by a { 
+  color: #000000; 
+  text-decoration: none; 
+}
+
+.footerDireitos .by a:hover { 
+  text-decoration: underline; 
+}
+
+/*Responsivo*/
+/*768PX BREAKPOINT*/
+@media (min-width: 48em){
+
+  .footerColuna { 
+    width: 30%; 
+    margin-right: 5%; 
+    margin-bottom: 0; 
+  }
+
+  .footerColuna:nth-of-type(3n+0){ 
+    margin-right: 0; 
+    border-right: 0;
+  }
+} 
+
+ /* BOTÕES FIXOS */
+ .botaoCarrinho a img{
+  width: 43px;
+  height: 43px;
+  position: fixed;
+  right: 10px;
+  bottom: 70px;
+}
+
+.voltaTopo a img{
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 11px;
+  bottom: 20px;
+}
+
+.botaoHome a img{
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 61px;
+  bottom: 21px;
+}

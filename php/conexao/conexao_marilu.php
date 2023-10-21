@@ -9,88 +9,92 @@ class Conexao
     public function  __construct() {
         try {
             $this->conn = new PDO('pgsql:host=pgsql.projetoscti.com.br;dbname=projetoscti31', 'projetoscti31', '722317');
+<<<<<<< HEAD:php/conexao/conexao_marilu.php
             echo "Conexão bem-sucedida!";
         } catch (PDOException $e) {
             echo "Erro na conexão: " . $e->getMessage();
         }
     } 
+=======
+            // echo "Conex�o bem-sucedida!";
+        } catch (PDOException $e) {
+            echo "Erro na conex�o: " . $e->getMessage();
+        }
+    } 
+
+    // Ex:
+    // $tabela = 'nome da tabela';
+    // $condicao = 'Where id= 56';
+>>>>>>> 0f7441d8e5854a46e64380c569a4711da18dcaa4:php/classes/conexao.php
 
     public function pesquisar($tabela, $condicao = '') {
-        try {
-            $stmt = $this->conn->prepare("SELECT * FROM $tabela $condicao");
-            $stmt->execute();
-            $i = 0;
-            while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                if (empty($result) || $result === false) {
-                    throw new Exception("Erro ao pesquisar em $tabela");
-                }
-                $resultsArray[$i] = $result;
-                $i ++;
+        $stmt = $this->conn->prepare("SELECT * FROM $tabela $condicao");
+        $stmt->execute();
+        $i = 0;
+        while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            if (empty($result) || $result === false) {
+                return false;
             }
-
-            return $resultsArray;
-        } catch (Exception $e) {
-            return [
-                'error' => true,
-                'mensagem' => $e->getMessage()
-            ];
+            $resultsArray[$i] = $result;
+            $i ++;
         }
+
+        return $resultsArray;
     }
+
+
+    // Ex:
+    // $tabela = 'nome da tabela';
+    // $insert = ['nome do campo' => 'valor a ser inserido'];
 
     public function inserir($tabela, $insert) {
-        try {
-            $colunas = implode(',', array_keys($insert));
-            $valores = ':' . implode(',:', array_keys($insert));
-            $sql = "INSERT INTO $tabela ($colunas) VALUES ($valores)";
-            $stmt = $this->conn->prepare($sql);
-            $stmt->execute($insert);
-            if (!$stmt) {
-                throw new Exception("Erro ao inserir em $tabela");
-            }
-            return true;
-        } catch (Exception $e) {
-            return [
-                'error' => true,
-                'mensagem' => $e->getMessage()
-            ];
+        $colunas = implode(',', array_keys($insert));
+        $valores = ':' . implode(',:', array_keys($insert));
+        $sql = "INSERT INTO $tabela ($colunas) VALUES ($valores)";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute($insert);
+        if (!$stmt) {
+            return false;
         }
+        return true;
     }
+
+    // Ex:
+    // $tabela = 'nome da tabela';
+    // $condicao = 'id = 4';
 
     public function excluir($tabela, $condicao) {
-        try {
-            $sql = "DELETE FROM $tabela WHERE $condicao";
-            $stmt = $this->conn->prepare($sql);
-            $stmt->execute();
-            if (!$stmt) {
-                throw new Exception("Erro ao deletar em $tabela");
-            }
-
-            return true;
-        } catch (Exception $e) {
-            return [
-                'error' => true,
-                'mensagem' => $e->getMessage()
-            ];
+        $sql = "DELETE FROM $tabela WHERE $condicao";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        if (!$stmt) {
+            return false;
         }
+
+        return true;;
     }
 
-    public function alterar($tabela, $campos, $condicao) {
-        try {
-            $sql = "UPDATE $tabela SET $campos WHERE $condicao";  
-            $stmt = $this->conn->prepare($sql);
-            $stmt->execute();
-            $retorno = $stmt->fetch();
-            if (empty($retorno) || $retorno === false) {
-                throw new Exception("Erro ao atualizar em $tabela");
-            }
+    // Ex: 
+    // $campos = ['nome', 'descricao', 'preco', 'categoria', 'criacao'];
+    // $valores = ['mariuzz', 'mariluzzzinha', 900, 1, date("Y-m-d H:i:s")];
+    // $condicao = 'id = 2';
 
-            return $retorno;
-        } catch (Exception $e) {
-            return [
-                'error' => true,
-                'mensagem' => $e->getMessage()
-            ];
+    public function alterar($tabela, $campos, $valores, $condicao) {
+        $set = '';
+        foreach ($campos as $campo) {
+            $set .= "$campo = ?, ";
         }
+        $set = rtrim($set, ', ');
+
+        $sql = "UPDATE $tabela SET $set WHERE $condicao";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute($valores);
+        $linhasAlteradas = $stmt->rowCount();
+        if ($linhasAlteradas < 1) {
+            return false;
+        } 
+        return true;
     }
+    
 }
 ?>
