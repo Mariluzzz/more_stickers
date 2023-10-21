@@ -15,12 +15,12 @@
         <center><h1><font color=black>LOGIN</font></h1></center>
    
         <section>
-            <form method="POST" name="Loginform" action="../php/login.php">
+            <form method="POST" name="Loginform" action="../php/login/login_sessao.php">
 
                 <div id="divImg"><img src="../img/perfil.png" width="55%" height="70%"></div>
                         <br>
                 <div class="divCampos">
-                    <input type="text" name="usuario" placeholder="Nome de Usuário" required>
+                    <input type="text" name="usuario" id="usuario" placeholder="Nome de Usuário" required>
                         <br>
                         <br>
                     <input type="password" name="senha" id="senha" placeholder="Senha" required>
@@ -35,9 +35,12 @@
                 </div>
      
                         <br>
-                <div id="divForget">
-                    <a href="../html/esqueci.html" style="color: blue;">Esqueci a senha</a>
-                </div>
+                        <div id="divForget">
+                            <a href="../html/cadastro.html" style="color: blue;">Realizar cadastro</a>
+                        </div>
+                        <div id="divForget">
+                            <a href="../html/esqueci.html" style="color: blue;">Esqueci a senha</a>
+                        </div>
                         <br>
                      
                 <center><button type="submit" name="enviar" id="divEnviar">LOGAR ➜</button></center>

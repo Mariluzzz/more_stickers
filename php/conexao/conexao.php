@@ -15,16 +15,32 @@ function conecta ($params = "") {
         return $conn; 
     }
 }
-  
+
+function funcaoLogin ($params, &$admin) {
+    $verificaUsuario = pesquisar("usuarios", "where nome_usuario = '{$params['usuario']}' and senha = '{$params['senha']}'");  
+    if (empty($verificaUsuario)) {
+        throw new Exception("Usuário não encontrado, favor cadastrar-se :)");
+    }
+
+    if ($verificaUsuario[0]['admin']) {
+        $admin = true;
+    }
+    
+    return true;
+}
+
+function DefineCookie($nomeCookie, $nomeUser, $temp) 
+{
+    echo "Cookie: $nomeCookie Valor: $nomeUser";  
+    setcookie($nomeCookie, $nomeUser, time() + $temp * 60); 
+}
+
 function pesquisar($tabela, $condicao = '') {
     $conn = conecta();
     $stmt = $conn->prepare("SELECT * FROM $tabela $condicao");
     $stmt->execute();
     $i = 0;
     while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        if (empty($result) || $result === false) {
-            throw new Exception("Erro ao pesquisar em $tabela");
-        }
         $resultsArray[$i] = $result;
         $i ++;
     }
