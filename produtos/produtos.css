@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+}
+
+.produtos .card {
+    background-color: white;
+    border-radius: 10px;
+    margin: 40px;
+    margin-bottom: 80px;
+    padding: 10px;
+    width: 100%;
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.produtos .card .imagemProduto {
+    width: 100%;
+}
+
+.produtos .card h4 {
+    font-weight: 800;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.produtos .card h5 {
+    font-weight: 800;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.produtos .card a {
+    color: #5d1d88;
+    border: 2px solid #5d1d88;
+    border-radius: 30px;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.produtos .card a:hover {
+    color: #ffffff;
+    background-color: #5d1d88;
+}
+
+.produtos .card {
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.produtos .card:hover{
+    box-shadow: -1px 2px 12px -2px #ee82ee;
+    -webkit-box-shadow: -1px 2px 12px -2px #ee82ee;
+    -moz-box-shadow: -1px 2px 12px -2px #ee82ee;
+    width: 100%;
+    max-width: 250px;
+}
+/* FILTRO */
+.container .filtro, .filtro .quadradoFiltro {
+    display: flex;
+    justify-content: flex-start;
+    padding: 40px;
+}
+
+.filtro .quadradoFiltro {
+    background-color: #181818;
+    width: 200px;
+    height: 300px; 
+    margin: 0 auto; 
+    text-align: left; 
+    border: 1px solid #ffb700; 
+    border-radius: 15px;
+    padding: 20px; 
+    box-shadow: -1px 2px 12px -2px #ffb700;
+    -webkit-box-shadow: -1px 2px 12px -2px #ffb700;
+    -moz-box-shadow: -1px 2px 12px -2px #ffb700;
+}
+
+.filtro .quadradoFiltro{    
+    position: fixed;
+    z-index: 1;
+}
+
+.filtro{
+    margin-right: 200px;
+}
+
+.filtro .categorias a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    display: block;
+    margin: 10px;
+}
+
+.filtro .categorias a:hover {
+    text-decoration: none;
+    color: #ffb700;
+    font-weight: 700;
+}
+
+h3 {
+    text-align: center; 
+    color: white;
+}
+
+/* RESPONSIVIDADE PRODUTOS*/
+@media (max-width: 768px) {
+    .produto-card {
+        width: 100%; /* Para ocupar toda a largura em telas pequenas */
+    }
+
+    .filtro {
+        width: 100%;
+        float: none;
+    }
+
+    .produtos {
+        margin-left: 0;
+    }
+}
