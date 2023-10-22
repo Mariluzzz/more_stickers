@@ -1,4 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
+
+    let adm = '';
+    if(document.getElementById('adm').value == 1) {
+        adm = '<ul>'+
+                '<li>'+
+                    '<a href="../php/cadastroProdutosTela.php?tela=add" id="cadClient" >Cadastrar</a>'+
+                '</li>'+
+                '<li>'+
+                    '<a href="../php/estoque.php" id="listClient">Estoque</a>'+
+                '</li>'+
+                '<li>'+
+                    '<a href="#" id="listClient" >Relatório</a>'+
+                '</li>'+
+            '</ul>';
+    }
     
     let cabecario = '<!DOCTYPE html>'+
     '<html lang="pt-br">'+
@@ -18,21 +33,11 @@ document.addEventListener("DOMContentLoaded", function() {
                           '</button>'+
                       '</div>'+
                     '<nav>' +
-                        '<li> <a href="../php/home.php"> HOME </a> </li>'+
+                        '<li> <a href="home.php"> HOME </a> </li>'+
                         '<li> <a href="../html/sobreNos.html"> SOBRE </a> </li>'+
                         '<li>'+
-                            '<a id="client" class="button">PRODUTOS</a>'+
-                            '<ul>'+
-                                '<li>'+
-                                    '<a href="../php/cadastroProdutosTela.php?tela=add" id="cadClient" >Cadastrar</a>'+
-                                '</li>'+
-                                '<li>'+
-                                    '<a href="../php/estoque.php" id="listClient">Estoque</a>'+
-                                '</li>'+
-                                '<li>'+
-                                    '<a href="#" id="listClient" >Relatório</a>'+
-                                '</li>'+
-                            '</ul>'+
+                            '<a href="produtos.php" id="client" class="button">PRODUTOS</a>'+
+                            adm +
                         '</li>'+
                         '<li> <a href="#"> CONTATO </a> </li>'+
                     '</nav>'+

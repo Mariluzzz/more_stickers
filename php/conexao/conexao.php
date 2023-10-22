@@ -17,6 +17,7 @@ function conecta ($params = "") {
 }
 
 function funcaoLogin ($params, &$admin) {
+    $admin = false;
     $verificaUsuario = pesquisar("usuarios", "where nome_usuario = '{$params['usuario']}' and senha = '{$params['senha']}'");  
     if (empty($verificaUsuario)) {
         return false;
@@ -43,7 +44,7 @@ function pesquisar($tabela, $condicao = '') {
         $resultsArray[$i] = $result;
         $i ++;
     }
-    
+
     $resultsArray = !empty($resultsArray) ? $resultsArray : [];
     return $resultsArray;
 }

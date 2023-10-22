@@ -1,5 +1,8 @@
 <?php
 session_start();
+
+include("cabecario.php");
+
 if (isset($_SESSION['nome'])) {
     $nome = $_SESSION['nome'];
 } else {

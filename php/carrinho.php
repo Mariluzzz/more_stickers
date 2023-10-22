@@ -3,6 +3,7 @@
  ini_set("display_errors", 1);
  
  include('conexao/conexao.php');
+ include("cabecario.php");
  
  session_start();
 

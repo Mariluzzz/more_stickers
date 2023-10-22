@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+include("cabecario.php");
+
 if (isset($_SESSION['sessaoConectado'])) {
     $sessaoConectado = $_SESSION['sessaoConectado'];
 } else {    

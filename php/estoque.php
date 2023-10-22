@@ -26,6 +26,7 @@
                 </tr>
                 <?php
                     include 'conexao/conexao.php';
+                    include("cabecario.php");
 
                     $return = pesquisar('produtos', 'WHERE situacao=TRUE ORDER BY categoria ASC');
                     foreach($return as $info) {
