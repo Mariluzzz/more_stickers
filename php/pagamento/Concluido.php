@@ -3,7 +3,12 @@ session_start();
 if (isset($_SESSION['nome'])) {
     $nome = $_SESSION['nome'];
 } else {
-    echo "ERROR";
+    ?>
+    <script>
+        alert("Faça login para continuar com o pagamento!");
+    </script>
+    <?php
+    header("Location: ../../login/login.php");
 }
 ?>
 
@@ -12,7 +17,7 @@ if (isset($_SESSION['nome'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="forma.css">
+    <link rel="stylesheet" href="../../css/forma.css">
     <title>Pagamento Concluido</title>
 </head>
 <body>
@@ -21,7 +26,7 @@ if (isset($_SESSION['nome'])) {
             <h1>Pagamento Efetuado!🤑🥳</h1>
         </div>
         <div class="imagem">
-            <img src="/more_stickers/imgs/img_correta.png" alt="imagem_correta">
+            <img src="../../img/pagamento/img_correta.png" alt="imagem_correta">
         </div>
         <div class="titulo">
             <h1>+ADESIVOS AGRADECE PELA SUA COMPRA, <?php echo strtoupper($nome); ?>!</h1>

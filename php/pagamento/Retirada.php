@@ -26,7 +26,7 @@ if ($hora_atual >= 6 && $hora_atual < 12) {
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='stylesheet' href='retirada.css'>
+    <link rel='stylesheet' href='../../css/retirada.css'>
     <title>Retirar Pedidos</title>
 </head>
 <body>

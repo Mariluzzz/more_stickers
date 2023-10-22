@@ -2,26 +2,22 @@
  error_reporting(E_ALL);
  ini_set("display_errors", 1);
  
- include('conexao/util.php');
-
- $conn = conecta();   
+ include('conexao/conexao.php');
  
  session_start();
 
  include ('cabecalho.php');
 
  $session_id = session_id();  
- $conn = conecta();  
 
- // se estiver logado pega o codigo do usuario atraves do $login 
  if ( isset($_SESSION['sessaoLogin']) ) {
       $login = $_SESSION['sessaoLogin'];
-      $codigoUsuario = ValorSQL($conn, " select id from usuarios 
-                                         where nome_usuario = '$login'");
+      $result = pesquisar("usuarios", "where nome_usuario = '$login'");
+      $cod_user = $result[0]['id'];
  }
      
  // existe alguma compra associada ao session_id ??
- $existe = intval ( ValorSQL($conn," select count(*) from vendas 
+ $existeCompra = intval ( pesquisar()" select count(*) from vendas 
                                     inner join tmpcompra
                                     on venas.id = tmpcompra.fk_id  //querida marilu nesse aqui onde ta escrito id era id_comrpas so q o id msm sendo fk ele pareceu o correto na hora, eu tentei :´) te amo
                                     where tmpcompra.session = '$session_id' ") ) == 1;

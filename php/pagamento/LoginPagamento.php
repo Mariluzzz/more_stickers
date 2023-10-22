@@ -1,5 +1,17 @@
 <?php
 session_start();
+
+if (isset($_SESSION['sessaoConectado'])) {
+    $sessaoConectado = $_SESSION['sessaoConectado'];
+} else {    
+    ?>
+    <script>
+        alert("Faça login para continuar com o pagamento!");
+    </script>
+    <?php
+    header("Location: ../../login/login.php");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +20,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagamento</title>
-    <link rel="stylesheet" href="pagamento.css">
+    <link rel="stylesheet" href="../../css/pagamento.css">
 </head>
 <body>
     <div class="container">
@@ -19,7 +31,7 @@ session_start();
 
         <!-- Imagem -->
         <div class="imagem">
-            <img src="/more_stickers/imgs/comprar_sacolinha.png" alt="sacolinha">
+            <img src="../../img/pagamento/comprar_sacolinha.png" alt="sacolinha">
         </div>
 
         <!-- Formulário -->

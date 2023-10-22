@@ -1,6 +1,17 @@
 <?php
 session_start();
 
+if (isset($_SESSION['sessaoConectado'])) {
+    $sessaoConectado = $_SESSION['sessaoConectado'];
+} else {    
+    ?>
+    <script>
+        alert("Faça login para continuar com o pagamento!");
+    </script>
+    <?php
+    header("Location: ../../login/login.php");
+}
+
 if (isset($_SESSION['nome'])) {
     $nome = $_SESSION['nome'];
 } else {
@@ -14,7 +25,7 @@ if (isset($_SESSION['nome'])) {
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='stylesheet' href='forma.css'>
+    <link rel='stylesheet' href='../../css/forma.css'>
     <title>Formas de Pagamento</title>
 </head>
 <body>
