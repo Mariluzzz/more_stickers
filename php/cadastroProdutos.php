@@ -1,10 +1,6 @@
 <?php
 
-require_once 'classes/conexao.php';
-
-$con = new Conexao();
-
-print_r($_POST);
+require_once 'conexao/conexao.php';
 
 $acao = isset($_POST['acao']) ? $_POST['acao'] : $_GET['acao']; 
 
@@ -21,7 +17,7 @@ switch ($acao) {
             'situacao' => $_POST['situacao']
         ];
         
-        $result = $con->inserir('produtos', $infos);
+        $result = inserir('produtos', $infos);
         if (!$result) {
             ?>
             <script>
