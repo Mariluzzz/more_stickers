@@ -43,7 +43,7 @@ function pesquisar($tabela, $condicao = '') {
         $resultsArray[$i] = $result;
         $i ++;
     }
-
+    
     $resultsArray = !empty($resultsArray) ? $resultsArray : [];
     return $resultsArray;
 }

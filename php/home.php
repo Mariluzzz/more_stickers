@@ -4,6 +4,8 @@
     session_start();
     unset($_SESSION['errorSession']);
     
+    include 'conexao/conexao.php';
+
     if (isset($_SESSION['sessaoDeslogada']) && $_SESSION['sessaoDeslogada']) {
         ?> 
         <script>
@@ -38,45 +40,36 @@
     
     <!-- CATEGORIAS DOS PRODUTOS -->
     <div class="categorias">
-        <a href="/">TODOS</a>
-        <a href="/">JOGOS</a>
-        <a href="/">FILMES</a>
-        <a href="/">ANIMES</a>
-        <a href="/">TIMES</a>
-        <a href="/">TECNOLOGIA</a>
+        <a href="opcoesProdutos/produtos.php?categoria=">TODOS</a>
+        <a href="opcoesProdutos/produtos.php?categoria=1">ANIMES</a>
+        <a href="opcoesProdutos/produtos.php?categoria=2">DESENHOS</a>
+        <a href="opcoesProdutos/produtos.php?categoria=3">FILMES/SÉRIES</a>
+        <a href="opcoesProdutos/produtos.php?categoria=4">TECNOLOGIA</a>
+        <a href="opcoesProdutos/produtos.php?categoria=5">JOGOS</a>
+        <a href="opcoesProdutos/produtos.php?categoria=6">TIMES</a>
     </div>  
 
     <div class="linha"></div>
     <!-- PRODUTOS ALEATÓRIOS -->
     <h2>PRODUTOS EM DESTAQUE </h2> 
-    <div class="produtosCarrossel">
-        <div class="card">
-            <img class="imagemProduto" src="../img/home/lulaMolusco.png" />
-            <h4> Lula Molusco</h4>
-            <div class="valorProduto">
-                <h5> R$4,00</h5>
-            </div>
-            <a> Adicionar ao Carrinho </a>
-        </div>
-
-        <div class="card">
-            <img class="imagemProduto" src="../img/home/imnotaRobot.png" />
-            <h4> Robô da Informatica</h4>
-            <div class="valorProduto">
-                <h5> R$4,00</h5>
-            </div>
-            <a> Adicionar ao Carrinho </a>
-        </div>
-
-        <div class="card">
-            <img class="imagemProduto" src="../img/home/helloWorld.png" />
-            <h4> Hello World </h4>
-            <div class="valorProduto">
-                <h5> R$4,00</h5>
-            </div>
-            <a> Adicionar ao Carrinho </a>
-        </div>
-    </div>
+    <?php
+            
+            $result = pesquisar("produtos", "ORDER BY RANDOM() LIMIT 3");
+            foreach($result as $infos) {
+                trigger_error(print_r($infos));
+                $categoria = pesquisar("categorias", "WHERE id={$infos['categoria']}");
+                ?>
+                <div class="card" id="<?php echo $infos['id'];?>">
+                    <img class="imagemProduto" src="../img/produtos/<?php echo trim($categoria[0]['descricao']); ?>/<?php echo trim($infos['nome']);?>.png" />
+                    <h4><?php echo $infos['nome'];?></h4>
+                    <div class="valorProduto">
+                        <h5> R$<?php echo $infos['preco'];?></h5>
+                    </div>
+                    <a> Adicionar ao Carrinho </a>
+                </div>
+                <?php
+            }
+        ?>
 
     <div class="linhaVideo"></div>
     <!-- VIDEO E SOBRE A EMPRESA -->
@@ -93,34 +86,24 @@
     <div class="linhaVideo"></div>
 
     <!-- PRODUTOS ALEATÓRIOS --> 
-    <div class="produtosCarrosselBaixo">
-        <div class="card">
-            <img class="imagemProduto" src="../img/home/pgadminDarkWader.png" />
-            <h4> Darth Vader </h4>
-            <div class="valorProduto">
-                <h5> R$4,00</h5>
-            </div>
-            <a> Adicionar ao Carrinho </a>
-        </div>
-
-        <div class="card">
-            <img class="imagemProduto" src="../img/home/imnotaRobot.png" />
-            <h4> Robô da Informatica</h4>
-            <div class="valorProduto">
-                <h5> R$4,00</h5>
-            </div>
-            <a> Adicionar ao Carrinho </a>
-        </div>
-
-        <div class="card">
-            <img class="imagemProduto" src="../img/home/garfield.png" />
-            <h4> Garfield</h4>
-            <div class="valorProduto">
-                <h5> R$4,00</h5>
-            </div>
-            <a> Adicionar ao Carrinho </a>
-        </div>
-    </div>
+    <?php
+            
+            $result = pesquisar("produtos", "ORDER BY RANDOM() LIMIT 3");
+            
+            foreach($result as $infos) {
+                $categoria = pesquisar("categorias", "WHERE id={$infos['categoria']}");
+                ?>
+                <div class="card" id="<?php echo $infos['id'];?>">
+                    <img class="imagemProduto" src="../img/produtos/<?php echo trim($categoria[0]['descricao']); ?>/<?php echo trim($infos['nome']);?>.png" />
+                    <h4><?php echo $infos['nome'];?></h4>
+                    <div class="valorProduto">
+                        <h5> R$<?php echo $infos['preco'];?></h5>
+                    </div>
+                    <a> Adicionar ao Carrinho </a>
+                </div>
+                <?php
+            }
+        ?>
 
     <!-- BOTÕES CARRINHO/VOLTAR AO TOPO -->
     <div class="botoes">
