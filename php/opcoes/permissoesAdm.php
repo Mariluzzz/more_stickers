@@ -11,6 +11,7 @@ if (isset($_SESSION['sessaoConectado'])) {
 if ($sessaoConectado) {
 
     if($_SESSION['sessaoAdmin']) {
+        echo "<p align='right'>Bom dia, Administrador<br>";
         '<ul>'+
             '<li>'+
                 '<a href="../php/cadastroProdutosTela.php?tela=add" id="cadClient" >Cadastrar</a>'+
@@ -22,8 +23,10 @@ if ($sessaoConectado) {
                 '<a href="#" id="listClient" >Relatório</a>'+
             '</li>'+
         '</ul>'+
-    } else {
 
+        '<li> <a href="#"> CONTATO </a> </li>'+
+    } else {
+        "<p align='right'>Bom dia, Fulano<br></p>";
     }
     /*
     aqui vc coloca opcoes de 

@@ -32,7 +32,7 @@ switch ($acao) {
         $campos = ['nome', 'descricao', 'preco', 'categoria', 'qntd', 'situacao'];
         $valores = [$_POST['nome'], $_POST['desc'], $_POST['preco'], $_POST['categoria'], $_POST['qtd'] , $_POST['situacao']];
         $condicao = "id=".$_POST['id'];
-        $result = $con->alterar('produtos', $campos, $valores, $condicao);
+        $result = alterar('produtos', $campos, $valores, $condicao);
         if (!$result) {
             ?>
             <script>
@@ -44,7 +44,7 @@ switch ($acao) {
     break;
 
     case 'excluir':
-        $result = $con->excluir('produtos', ['situcao'], ['FALSE'],'id ='.$_GET['id']);
+        $result = excluir('produtos', ['situcao'], ['FALSE'],'id ='.$_GET['id']);
         if(!$result) {
             ?>
             <script>
