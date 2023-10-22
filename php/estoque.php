@@ -27,7 +27,7 @@
                 <?php
                     include 'conexao/conexao.php';
 
-                    $return = pesquisar('produtos', 'WHERE situacao=TRUE');
+                    $return = pesquisar('produtos', 'WHERE situacao=TRUE ORDER BY categoria ASC');
                     foreach($return as $info) {
                         ?>
                 <tr>
