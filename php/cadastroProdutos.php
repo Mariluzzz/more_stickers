@@ -24,7 +24,9 @@ switch ($acao) {
                 alert("Erro ao inserir usuário");
             </script>
             <?php
+            break;
         }
+        header('Location: estoque.php');
 
     break;
 
@@ -39,19 +41,23 @@ switch ($acao) {
                 alert("Erro ao alterar tabela");
             </script>
             <?php
+            break;
         }
+        header('Location: estoque.php');
 
     break;
 
     case 'excluir':
-        $result = excluir('produtos', ['situcao'], ['FALSE'],'id ='.$_GET['id']);
+        $result = alterar('produtos', ['situcao'], ['FALSE'],'id ='.$_GET['id']);
         if(!$result) {
             ?>
             <script>
                 alert("Erro ao alterar tabela");
             </script>
             <?php
+            break;
         }
+        header('Location: estoque.php');
 
     break;
 }

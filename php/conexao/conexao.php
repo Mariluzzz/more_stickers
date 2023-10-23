@@ -75,15 +75,34 @@ function excluir($tabela, $condicao) {
     return true;
 }
 
-function alterar($tabela, $campos, $condicao) {
+function alterar($tabela, $campos, $valores, $condicao) {
     $conn = conecta();
-    $sql = "UPDATE $tabela SET $campos WHERE $condicao";  
+    $set = '';
+    foreach ($campos as $campo) {
+        $set .= "$campo = ?, ";
+    }
+    $set = rtrim($set, ', ');
+
+    $sql = "UPDATE $tabela SET $set WHERE $condicao";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute($valores);
+    $linhasAlteradas = $stmt->rowCount();
+    if ($linhasAlteradas < 1) {
+        return false;
+    } 
+    return true;
+}
+
+function consulta($sql) {
+    $conn = conecta();
     $stmt = $conn->prepare($sql);
     $stmt->execute();
-    $retorno = $stmt->fetch();
-    if (empty($retorno) || $retorno === false) {
-        throw new Exception("Erro ao atualizar em $tabela");
+    $i = 0;
+    while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $resultsArray[$i] = $result;
+        $i ++;
     }
 
-    return $retorno;
+    $resultsArray = !empty($resultsArray) ? $resultsArray : [];
+    return $resultsArray;
 }
