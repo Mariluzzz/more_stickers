@@ -57,7 +57,7 @@ function inserir($tabela, $insert) {
     $stmt = $conn->prepare($sql);
     $stmt->execute($insert);
     if (!$stmt) {
-        throw new Exception("Erro ao inserir em $tabela");
+        return false;
     }
     return true;
 

@@ -17,11 +17,27 @@ switch ($acao) {
             'situacao' => $_POST['situacao']
         ];
         
-        $result = inserir('produtos', $infos);
+        $result = inserir("produtos", $infos);
         if (!$result) {
             ?>
             <script>
-                alert("Erro ao inserir usuário");
+                alert("Erro ao inserir produto");
+            </script>
+            <?php
+            break;
+        }
+        $produto = pesquisar("produtos", "WHERE nome={$_POST['nome']}");
+        $infosEstoque = [
+            'produto' => $produto['id'],
+            'quantidade' => $_POST['qtd'],
+            'data' => date("Y-m-d H:i:m"),
+            'tipo_acao' => 1
+        ];
+        $estoque = inserir('estoque', $infosEstoque);
+        if (!$estoque) {
+            ?>
+            <script>
+                alert("Erro ao inserir no estoque");
             </script>
             <?php
             break;
@@ -43,6 +59,10 @@ switch ($acao) {
             <?php
             break;
         }
+        // $campos = ['quantidade'];
+        // $valores = [$_POST['qtd']];
+        // $condicao = "produto=".$_POST['id'];
+        // $estoque = alterar("estoque", $campos, $valores, $condicao);
         header('Location: estoque.php');
 
     break;
