@@ -20,7 +20,7 @@
                                 <input type="hidden" id="acao" name="acao" value="incluir">
                                 <label for="imagem">Selecione uma imagem:</label>
                                 <img src="../img/addImg.svg">
-                                <input type="file" id="imagem" name="imagem">
+                                <input type="file" id="imagem" name="imagem"><br>
                                 <label>Nome</label>
                                 <input type="text" id="nome" name="nome" class="info">
                                 <label>Descrição</label>

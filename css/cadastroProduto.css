@@ -7,6 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 1500px;
+    color: #ffb700;
 }
 
 .container {
@@ -33,7 +34,7 @@ body {
 }
 
 .info {
-    width: 100%;
+    width: 750px;
     padding: 10px;
     border: 2px solid #5d1d88;
     border-radius: 30px;
