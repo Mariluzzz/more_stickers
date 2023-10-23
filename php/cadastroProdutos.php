@@ -68,7 +68,7 @@ switch ($acao) {
     break;
 
     case 'excluir':
-        $result = alterar('produtos', ['situcao'], ['FALSE'],'id ='.$_GET['id']);
+        $result = alterar('produtos', ['situacao'], ['FALSE'],'id ='.$_GET['id']);
         if(!$result) {
             ?>
             <script>

@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffb700;
+}
+table, td, th{
+    border: 2px #5d1d88 solid;
+    border-collapse: collapse;
+}
