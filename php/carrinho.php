@@ -5,9 +5,7 @@
  include('conexao/conexao.php');
  include("cabecario.php");
  
- session_start();
-
- include ('cabecalho.php');
+ //session_start(); -------------------------------------
 
  $session_id = session_id();  
 
@@ -18,9 +16,9 @@
  }
      
  // existe alguma compra associada ao session_id ??
- $existeCompra = intval ( pesquisar()" select count(*) from vendas 
+ $existeCompra = intval (pesquisar(" select count(*) from vendas 
                                     inner join tmpcompra
-                                    on venas.id = tmpcompra.fk_id  //querida marilu nesse aqui onde ta escrito id era id_comrpas so q o id msm sendo fk ele pareceu o correto na hora, eu tentei :´) te amo
+                                    on vendas.id = tmpcompra.fk_id  //querida marilu nesse aqui onde ta escrito id era id_comrpas so q o id msm sendo fk ele pareceu o correto na hora, eu tentei :´) te amo
                                     where tmpcompra.session = '$session_id' ") ) == 1;
  // se nao existe
  if (!$existe) {   
