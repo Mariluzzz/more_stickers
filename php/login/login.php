@@ -19,7 +19,7 @@ if (!$sessaoConectado) {
     }
 }
 
-if ($_SESSION['errorSession']) {
+if (isset($_SESSION['errorSession'])) {
     ?>
     <script>
         alert("Usuário não encontrado, favor cadastrar-se :)");
@@ -46,7 +46,7 @@ if ($_SESSION['errorSession']) {
         <section>
             <form method="POST" name="Loginform" action="login_sessao.php">
 
-                <div id="divImg"><img src="..php/img/perfil.png" width="55%" height="70%"></div>
+                <div id="divImg"><img src="../../img/perfil.png" width="55%" height="70%"></div>
                         <br>
                 <div class="divCampos">
                     <input type="text" name="usuario" id="usuario" placeholder="Nome de Usuário" required>
@@ -56,7 +56,7 @@ if ($_SESSION['errorSession']) {
 
                 <div id="divVersenha">
                     <button type="button" onclick="mostrarOcultar()" style="background: transparent; border: none; cursor:pointer;">
-                        <img src="../img/foto.png" height="30px" width="30px" style="margin-right: 50px;">
+                        <img src="../../img/foto.png" height="30px" width="30px" style="margin-right: 50px;">
                     </button>
                 </div>
                 
