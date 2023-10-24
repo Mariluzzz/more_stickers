@@ -95,11 +95,10 @@ function alterar($tabela, $campos, $valores, $condicao) {
 
 function consulta($sql) {
     $conn = conecta();
-    $stmt = $conn->prepare($sql);
-    $stmt->execute();
+    $result = $conn->query($sql);
     $i = 0;
-    while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        $resultsArray[$i] = $result;
+    while ($line = $result->fetch(PDO::FETCH_ASSOC)) {
+        $resultsArray[$i] = $line;
         $i ++;
     }
 
