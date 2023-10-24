@@ -14,8 +14,10 @@ body {
 
 .produtos {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: space-evenly;
+    width: 70%; 
+    justify-content: end;
 }
 
 .produtos .card {

@@ -23,25 +23,8 @@
 <body>
     <div id="barra"></div>
     <div class="container">
-        <!-- FILTRO DOS PRODUTOS -->
-        <div>
-            <div class="filtro">
-                <div class="quadradoFiltro">
-                    <div class="categorias">
-                        <h3> Filtrar por: </h3>
-                        <a href="produtos.php?categoria="> Todos </a>
-                        <a href="produtos.php?categoria=1"> Animes </a>
-                        <a href="produtos.php?categoria=2"> Desenhos </a>
-                        <a href="produtos.php?categoria=3"> Filmes/Séries </a>
-                        <a href="produtos.php?categoria=4"> Informática </a>
-                        <a href="produtos.php?categoria=5"> Jogos </a>
-                        <a href="produtos.php?categoria=6"> Times </a> 
-                    </div>
-                </div>
-            </div>
-
-            <!-- DIVS DOS PRODUTOS -->
-            <div class="produtos">
+        <!-- DIVS DOS PRODUTOS -->
+        <div class="produtos">
                 <!-- PRODUTO 1 -->
                 <?php
                     $condicao = !empty($categoria) ? "WHERE categoria=$categoria ORDER BY RANDOM()" : "ORDER BY RANDOM()";
@@ -73,6 +56,22 @@
                     }
                 ?>
             </div>
+        <!-- FILTRO DOS PRODUTOS -->
+        <div>
+            <div class="filtro">
+                <div class="quadradoFiltro">
+                    <div class="categorias">
+                        <h3> Filtrar por: </h3>
+                        <a href="produtos.php?categoria="> Todos </a>
+                        <a href="produtos.php?categoria=1"> Animes </a>
+                        <a href="produtos.php?categoria=2"> Desenhos </a>
+                        <a href="produtos.php?categoria=3"> Filmes/Séries </a>
+                        <a href="produtos.php?categoria=4"> Informática </a>
+                        <a href="produtos.php?categoria=5"> Jogos </a>
+                        <a href="produtos.php?categoria=6"> Times </a> 
+                    </div>
+                </div>
+            </div>
         </div>   
     </div> 
     <!-- BOTÕES CARRINHO/VOLTAR AO TOPO -->
@@ -90,5 +89,3 @@
     <div id="footer"></div>
 </body>
 </html>
-       
-
