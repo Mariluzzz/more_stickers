@@ -8,7 +8,37 @@ body {
     align-items: center;
     color: #ffb700;
 }
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    color: #ffb700;
+    font-weight: 600;
+    margin-bottom: 2%;
+}
+
+.add {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.add a img {
+    width: 60px;
+    height: 60px;
+}
+
 table, td, th{
     border: 2px #5d1d88 solid;
     border-collapse: collapse;
+    padding: 10px;
+}
+
+table tr td{
+    align-items: center;
+}
+    
+table tr a img {
+    width: 30px;
+    height: 30px;
 }

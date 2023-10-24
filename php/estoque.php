@@ -6,18 +6,17 @@
 </head>
 <body>
     <div>
-        <div>
-            Add Produto<br>
+        <div class="titulo"> <h1> ESTOQUE </h1> </div>
+        <div class="add">
+            <h3>Add Produto</h3>
             <a href="../php/cadastroProdutosTela.php?acao=adicionar&tela=add"><img src="../img/estoque/addProd.svg"></a>
         </div>
-        <div>Lista de Produtos</div>
         <div class="produtos">
             <table>
                 <tr>
                     <th>Nome</th>
                     <th>Descrição</th>
                     <th>Quantidade</th>
-                    <th></th>
                     <th></th>
                 </tr>
                 <?php

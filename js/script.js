@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
             '<div class="clear"></div>'+
             '<div class="footerDireitos">'+
                 '<p class="m-b-footer"> www.a+adesivos.com.br - 2023, todos os direitos reservados. &copy;</p>'+
-                '<p class="by"> Desenvolvido por: <a href="#" title="Seu nome">Witor Santos.</a></p>'+
+                '<p class="by"> Desenvolvido por: Luisa Prado|Mariana Godoi|Miguel Bodo|Murillo Robles|Witor Santos. </p>'+
             '</div>' +
         '</div>' +
     '</footer>'+
