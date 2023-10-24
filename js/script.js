@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
             '<div class="barra">'+
                 '<header>'+
                     '<div class="barraNavegacao">'+
-                        '<a href="../php/home.php"> <img src="../img/fixos/logoBarra.svg" alt="" id="logo"></a>'+
+                        '<a href="../php/home.php"> <img src="../img/fixos/logoBarra.png" alt="" id="logo"></a>'+
                         '<div class="barraPesquisa">'+
                             '<input placeholder="Procurar..." />'+
                             '<button>'+
