@@ -7,6 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container {
@@ -16,11 +17,11 @@ body {
     flex-direction: column;
     align-items: center;
     max-width: 100%;
-    border: 1px solid #ffb700; /* Adicione uma borda ao container */
+    border: 1px solid #ffb700; 
     border-radius: 10px;
     box-shadow: inset 1px -1px 21px -11px rgba(255, 255, 255, 1);
-    padding: 2%; /* Adicione um espaçamento interno ao container */
-    box-sizing: border-box; /* Para incluir o espaço de padding nas dimensões do contêiner. */
+    padding: 2%; 
+    box-sizing: border-box; 
 }
 
 /* Deixa a tela responsiva */
@@ -38,9 +39,9 @@ body {
     }
 
     .info {
-        width: 90%; /* Reduza a largura dos elementos .info em telas menores. */
-        padding: 2%; /* Adicione um espaço de padding dentro dos elementos .info */
-        border-radius: 10px; /* Ajuste o raio da borda para 10px. */
+        width: 90%; 
+        padding: 2%; 
+        border-radius: 10px; 
     }
     .infoPagamento, .escolha-botao {
         font-size: 14px;

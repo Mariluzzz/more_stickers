@@ -6,8 +6,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 1500px;
     color: #ffb700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container {
@@ -21,28 +21,65 @@ body {
     flex-direction: column;
     align-items: center;
     width: 800px;
-    height: 900px;
+    height: 750px;
     background-color: #181818;
 }
 
 .titulo {
     color: white;
+    display: flex;
+    justify-content: center;
 }
 
 .forms {
     margin-top: 20px;
 }
 
+
 .info {
-    width: 750px;
+    width: 100%;
+    max-width: 650px;
     padding: 10px;
     border: 2px solid #5d1d88;
     border-radius: 30px;
     margin: 5px 0;
+    margin-bottom: 30px;
 }
 
 .botoes {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
+}
+
+.botoes .salvar button {
+    color: #5d1d88;
+    border: 2px solid #5d1d88;
+    border-radius: 30px;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+ 
+ .botoes .salvar button:hover {
+     color: #ffffff;
+     background-color: #5d1d88;
+}
+
+.botoes .editar button {
+    color: #5d1d88;
+    border: 2px solid #5d1d88;
+    border-radius: 30px;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+ 
+ .botoes .editar button:hover {
+     color: #ffffff;
+     background-color: #5d1d88;
 }

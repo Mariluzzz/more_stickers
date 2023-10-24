@@ -12,30 +12,25 @@
         <?php
             if(isset($_GET['tela']) && $_GET['tela'] === 'add') {
                 ?>
+                <div class="titulo"> <h1>Cadastro de Produtos</h1></div>
                 <div class="container">
-                    <div class="titulo">Cadastro de produtos</div>
                         <div class="forms">
                             <form action="../php/cadastroProdutos.php" method="POST">
                                 <input type="hidden" id="situacao" name="situacao" value="TRUE">
                                 <input type="hidden" id="acao" name="acao" value="incluir">
-                                <label for="imagem">Selecione uma imagem:</label>
-                                <img src="../img/addImg.svg">
-                                <input type="file" id="imagem" name="imagem"><br>
-                                <label>Nome</label>
-                                <input type="text" id="nome" name="nome" class="info">
-                                <label>Descrição</label>
-                                <input type="text" id="desc" name="desc" class="info">
-                                <label>Categoria</label>
-                                <input type="number" id="categoria" name="categoria" class="info">
-                                <label>Preço</label>
-                                <input type="text" id="preco" name="preco" class="info">
-                                <label>Quantidade</label>
-                                <input type="number" id="qtd" name="qtd" class="info">
+                                <label for="imagem"> <h3>Selecione uma imagem: </h3> </label>
+                                <img src="../img/addImg.svg"> <br>
+                                <input type="file" id="imagem" name="imagem" class="info"><br>
+                                <input type="text" id="nome" name="nome" placeholder="Digite o nome..." class="info">
+                                <input type="text" id="desc" name="desc" placeholder="Digite a descrição..." class="info">
+                                <input type="number" id="categoria" name="categoria" placeholder="Digite a categoria.." class="info">
+                                <input type="text" id="preco" name="preco"  placeholder="Digite o preço..."class="info">
+                                <input type="number" id="qtd" name="qtd"  placeholder="Digite a quantidade..." class="info">
                                 <div class="botoes">
-                                    <div>
+                                    <div class="salvar">
                                         <button type="submit" class="button" id="button">Salvar</button>
                                     </div>
-                                    <div>
+                                    <div class="editar">
                                         <button type="submit" class="button" id="button">Editar</button>
                                     </div>
                                 </div>

@@ -7,13 +7,12 @@
 .barra {
   display: flex;
   flex-direction: column;
-  background: #000000;
-  min-height: 12.9vh;
+  border-bottom: 2px black solid;
 }
 
 header {
   display: flex;
-  width: 100%;
+  width: 100%; 
   height: 100px;
   background: #ffb700;
 }
@@ -52,7 +51,17 @@ header .barraNavegacao nav li a {
 
 header .barraNavegacao nav li a:hover {
   color: #5d1d88;
-  margin: 15px;
+  margin: 20px;
+}
+
+header .barraNavegacao nav li ul {
+  display: none;
+  list-style-type: none;
+  transition: 0.3s;
+}
+
+header .barraNavegacao nav li:hover > ul {
+  display: block;
 }
 
 header .barraNavegacao .barraPesquisa input {

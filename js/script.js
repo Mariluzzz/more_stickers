@@ -22,33 +22,34 @@ document.addEventListener("DOMContentLoaded", function() {
         '<script type="text/javascript" src="script.js"></script>'+
     '</head>'+
     '<body>'+
-        '<div class="barra">'+
-            '<header>'+
-                '<div class="barraNavegacao">'+
-                    '<a href="../php/home.php"> <img src="../img/fixos/logoBarra.svg" alt="" id="logo"></a>'+
-                    '<div class="barraPesquisa">'+
-                        '<input placeholder="Procurar..." />'+
-                          '<button>'+
-                              'PESQUISAR'+
-                          '</button>'+
-                      '</div>'+
-                    '<nav>' +
-                        '<li> <a href="home.php"> HOME </a> </li>'+
-                        '<li> <a href="../html/sobreNos.html"> SOBRE </a> </li>'+
-                        '<li>'+
-                            '<a href="produtos.php" id="client" class="button">PRODUTOS</a>'+
-                            adm +
-                        '</li>'+
-                        '<li> <a href="#"> CONTATO </a> </li>'+
-                    '</nav>'+
-                    '<div class="imagensBarra">'+
-                        '<a href="../php/carrinho.php"> <img src="../img/fixos/carrinho.svg" alt=""> </a>'+
-                        '<a href="../php/login/login.php"> <img src="../img/fixos/perfil.svg" alt=""> </a>'+
-                        '<a href="../php/login/logout.php"> <img src="../img/fixos/sair.svg" alt="" id="sair"> </a>'+
+            '<div class="barra">'+
+                '<header>'+
+                    '<div class="barraNavegacao">'+
+                        '<a href="../php/home.php"> <img src="../img/fixos/logoBarra.svg" alt="" id="logo"></a>'+
+                        '<div class="barraPesquisa">'+
+                            '<input placeholder="Procurar..." />'+
+                            '<button>'+
+                                'PESQUISAR'+
+                            '</button>'+
+                        '</div>'+
+                        '<nav>' +
+                            '<li> <a href="home.php"> HOME </a> </li>'+
+                            '<li> <a href="../html/sobreNos.html"> SOBRE </a> </li>'+
+                            '<li>'+
+                                '<a href="produtos.php" id="client" class="button">PRODUTOS</a>'+
+                                adm +
+                            '</li>'+
+                            '<li> <a href="#"> CONTATO </a> </li>'+
+                        '</nav>'+
+                        '<div class="imagensBarra">'+
+                            '<a href="../php/carrinho.php"> <img src="../img/fixos/carrinho.svg" alt=""> </a>'+
+                            '<a href="../php/login/login.php"> <img src="../img/fixos/perfil.svg" alt=""> </a>'+
+                            '<a href="../php/login/logout.php"> <img src="../img/fixos/sair.svg" alt="" id="sair"> </a>'+
+                        '</div>'+
                     '</div>'+
-                '</div>'+
-            '</header>'+
-        '</div>'+
+                '</header>'+
+            '</div>'+
+    '</body>'+
     '</hmtl>';
 
     let rodape = '<div class="rodape">'+

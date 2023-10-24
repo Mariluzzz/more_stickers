@@ -35,7 +35,7 @@
                         <a href="produtos.php?categoria=3"> Filmes/Séries </a>
                         <a href="produtos.php?categoria=4"> Informática </a>
                         <a href="produtos.php?categoria=5"> Jogos </a>
-                        <!-- <a href="produtos.php?categoria=6"> Times </a> -->
+                        <a href="produtos.php?categoria=6"> Times </a> 
                     </div>
                 </div>
             </div>
