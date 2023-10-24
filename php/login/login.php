@@ -38,15 +38,15 @@ if ($_SESSION['errorSession']) {
 
 <body id="divFundo">
   
-    <div style="background-color: white; width: 60%; height: 50%; border-radius: 20px; justify-content: center; margin-top: -40px; margin-left: 18%; ">
+    <div class="fundo">
                         
                   
-        <center><h1><font color=black>LOGIN</font></h1></center>
+        <center><h1><font color=white>LOGIN</font></h1></center>
    
         <section>
             <form method="POST" name="Loginform" action="login_sessao.php">
 
-                <div id="divImg"><img src="../img/perfil.png" width="55%" height="70%"></div>
+                <div id="divImg"><img src="..php/img/perfil.png" width="55%" height="70%"></div>
                         <br>
                 <div class="divCampos">
                     <input type="text" name="usuario" id="usuario" placeholder="Nome de Usuário" required>
@@ -64,15 +64,15 @@ if ($_SESSION['errorSession']) {
                 </div>
      
                         <br>
-                        <div id="divForget">
-                            <a href="../../html/cadastro.html" style="color: blue;">Realizar cadastro</a>
+                        <div id="divForget" class="link">
+                            <a href="../../html/cadastro.html">Realizar cadastro</a>
                         </div>
-                        <div id="divForget">
-                            <a href="../html/esqueci.html" style="color: blue;">Esqueci a senha</a>
+                        <div id="divForget" class="link">
+                            <a href="../html/esqueci.html">Esqueci a senha</a>
                         </div>
                         <br>
                      
-                <center><button type="submit" name="enviar" id="divEnviar">LOGAR ➜</button></center>
+                <center><button type="submit" name="enviar" id="divEnviar" class="enviar">LOGAR ➜</button></center>
                         <br>
                         <br>
                       

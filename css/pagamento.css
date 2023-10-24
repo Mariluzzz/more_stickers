@@ -87,3 +87,29 @@ body {
     background-size: cover;
     background-color: transparent;
 }
+
+ /* BOTÕES FIXOS */
+ .botaoCarrinho a img{
+    width: 43px;
+    height: 43px;
+    position: fixed;
+    right: 10px;
+    bottom: 70px;
+}
+
+.voltaTopo a img{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 11px;
+    bottom: 20px;
+    transform: rotate(-90deg);
+}
+
+.botaoHome a img{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 61px;
+    bottom: 21px;
+}

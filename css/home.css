@@ -220,6 +220,5 @@ h2 {
     top: 0;
     left: 0; /* Se você desejar que a div fique no canto esquerdo da página */
     width: 100%; /* Para ocupar toda a largura da página */
-    background-color: #f0f0f0; /* Cor de fundo da barra, ajuste conforme necessário */
     /* z-index: 100; Define a camada de sobreposição (pode ser ajustada conforme necessário) */
 }

@@ -41,5 +41,17 @@
             </table>
         </div>
     </div>
+    <!-- BOTÕES CARRINHO/VOLTAR AO TOPO -->
+    <div class="botoes">
+        <div class="botaoCarrinho">
+            <a href="/"> <img src="../img/fixos/carrinhoOriginal.svg"> </a>
+        </div>
+        <div class="voltaTopo">
+            <a href="#"> <img src="../img/fixos/voltaTopo.svg"> </a>
+        </div>
+        <div class="botaoHome">
+            <a href="home.php"> <img src="../img/fixos/homeOriginal.svg"> </a>
+        </div>
+    </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
    ini_set ( 'display_errors' , 1); 
    error_reporting (E_ALL);   
 
-   session_start(); 
+   //session_start(); 
    include("cabecario.php");
    include("conexao/conexao.php");
 
@@ -75,6 +75,18 @@
             </div>
         </div>   
     </div> 
+    <!-- BOTÕES CARRINHO/VOLTAR AO TOPO -->
+    <div class="botoes">
+        <div class="botaoCarrinho">
+            <a href="/"> <img src="../img/fixos/carrinhoOriginal.svg"> </a>
+        </div>
+        <div class="voltaTopo">
+            <a href="#"> <img src="../img/fixos/voltaTopo.svg"> </a>
+        </div>
+        <div class="botaoHome">
+            <a href="home.php"> <img src="../img/fixos/homeOriginal.svg"> </a>
+        </div>
+    </div>
     <div id="footer"></div>
 </body>
 </html>
