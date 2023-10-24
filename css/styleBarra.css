@@ -27,7 +27,8 @@ header .barraNavegacao {
 }
 
 header .barraNavegacao #logo{
-    background-color: #000000;
+    width: 108px;
+    height: 80px;
 }
 
 header .barraNavegacao nav {

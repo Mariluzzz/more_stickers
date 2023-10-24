@@ -5,11 +5,11 @@
  include('conexao/conexao.php');
  include("cabecario.php");
  
- session_start();
+ //session_start();
 
  $session_id = session_id();  
 
- CREATE TABLE public.vendas (
+ /* CREATE TABLE public.vendas (
 	id serial4 NOT NULL,
 	"data" timestamp NOT NULL,
 	pedido int4 NOT NULL,
@@ -32,7 +32,7 @@
       CONSTRAINT pedidos_carrinho_pkey PRIMARY KEY (id),
       CONSTRAINT pedidos_carrinho_produto_fkey FOREIGN KEY (produto) REFERENCES public.produtos(id),
       CONSTRAINT pedidos_carrinho_usuario_fkey FOREIGN KEY (usuario) REFERENCES public.usuarios(id)
-   );
+   ); */
 
  switch ($_GET['opc']) {
    case 'incluir':
@@ -115,7 +115,19 @@
 
       break;
    case 'alterar':
-
+      $campos = ['nome', 'descricao', 'preco', 'categoria', 'qntd', 'situacao'];
+        $valores = [$_POST['nome'], $_POST['desc'], $_POST['preco'], $_POST['categoria'], $_POST['qtd'] , $_POST['situacao']];
+        $condicao = "id=".$_POST['id'];
+        $result = alterar('produtos', $campos, $valores, $condicao);
+        if (!$result) {
+            ?>
+            <script>
+                alert("Erro ao alterar tabela");
+            </script>
+            <?php
+            break;
+        }
+        header('Location: carrinho.php');
       break;
    case 'excluir':
 
@@ -127,6 +139,7 @@
       
       break;
  }
+}
 
  if ( isset($_SESSION['sessaoLogin']) ) {
       $login = $_SESSION['sessaoLogin'];
