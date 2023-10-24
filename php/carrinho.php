@@ -5,9 +5,128 @@
  include('conexao/conexao.php');
  include("cabecario.php");
  
- //session_start(); -------------------------------------
+ session_start();
 
  $session_id = session_id();  
+
+ CREATE TABLE public.vendas (
+	id serial4 NOT NULL,
+	"data" timestamp NOT NULL,
+	pedido int4 NOT NULL,
+	usuario int4 NOT NULL,
+	produto int4 NOT NULL,
+	forma_pag int4 NOT NULL,
+	valor_total float8 NOT NULL,
+	CONSTRAINT vendas_pkey PRIMARY KEY (id),
+	CONSTRAINT vendas_forma_pag_fkey FOREIGN KEY (forma_pag) REFERENCES public.formas_pagamento(id),
+	CONSTRAINT vendas_pedido_fkey FOREIGN KEY (pedido) REFERENCES public.pedidos_carrinho(id),
+	CONSTRAINT vendas_produto_fkey FOREIGN KEY (produto) REFERENCES public.produtos(id),
+	CONSTRAINT vendas_usuario_fkey FOREIGN KEY (usuario) REFERENCES public.usuarios(id)
+
+   CREATE TABLE public.pedidos_carrinho (
+      id serial4 NOT NULL,
+      usuario int4 NOT NULL,
+      produto int4 NOT NULL,
+      dataentrada timestamp NOT NULL,
+      datasaida timestamp NOT NULL,
+      CONSTRAINT pedidos_carrinho_pkey PRIMARY KEY (id),
+      CONSTRAINT pedidos_carrinho_produto_fkey FOREIGN KEY (produto) REFERENCES public.produtos(id),
+      CONSTRAINT pedidos_carrinho_usuario_fkey FOREIGN KEY (usuario) REFERENCES public.usuarios(id)
+   );
+
+ switch ($_GET['opc']) {
+   case 'incluir':
+        if ($quantidade == 0) {
+         $infos = [
+            'usuario' => date("Y-m-d H:i:m"),
+            'produto' => $_GET['produto'],
+            'dataentrada' => date("Y-m-d H:i:m"),
+            'datasaida' => NULL
+         ];
+         inserir("pedidos_produtos", $infos);
+         ?>
+         <body>
+         <div class='content'>
+         <section>
+            <table>
+               <thead>
+               <tr>
+                  <th>Produto</th>
+                  <th>Preço</th>
+                  <th>Quantidade</th>
+                  <th>Total</th>
+                  <th>-</th>
+               </tr>
+               </thead>
+      <?php
+      $result = consulta("select b.id, b.nome, b.descricao as descProd, b.preco, c.descricao as descCat
+                           from 
+                              pedidos_carrinho a
+                           inner join 
+                              produtos b
+                           on 
+                              b.id = a.produto 
+                           inner join 
+                              categorias c
+                           on 
+                              c.id = b.categoria
+                           where 
+                           a.datasaida is null");
+      foreach($result as $infos) {
+         $codigoProduto = $infos['id']; 
+         $descProd = $linha['nome'];
+         $nome = $linha['descProd'];
+         $quant = 1;
+         $valor  = $linha['preco'];
+         ?>
+<tbody>
+     <tr>
+     <td>
+       <div>
+         <img src="../img/produtos/<?php echo $infos['descCat'];?>/<?php echo $infos['nome'];?>.png" alt=' ' width=50/>
+         <div class='info'>
+           <div class='name'><?php echo $infos[''];?></div>
+           <div class='category'>$descProd</div>
+         </div>
+       </div>
+     </td>
+     <td>R$$vunit</td>
+     <td>
+       <div class='qty'>
+         <button><i class='bx bx-minus'></i></button>
+         <span>$quant</span>
+         <button><i class='bx bx-plus'></i></button>
+       </div>
+     </td>
+     <td>R$$sub</td>
+     <td>
+        <a href='carrinho.php?operacao=2&codigoProduto=$codigoProduto'>
+           <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trash-fill' viewBox='0 0 16 16'>
+           <path d='M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z'/>
+           </svg><i class='bx bx-x'>
+           </i>
+        </a>
+     </td>
+   </tr>
+ </tbody>
+<?php
+      }
+
+
+      break;
+   case 'alterar':
+
+      break;
+   case 'excluir':
+
+      break;
+   case 'concluir':
+      
+      break;
+   default:
+      
+      break;
+ }
 
  if ( isset($_SESSION['sessaoLogin']) ) {
       $login = $_SESSION['sessaoLogin'];
@@ -78,21 +197,7 @@
                                                fk_id_produto = $codigoProduto and 
                                                fk_id_compra = $codigoCompra ") );  
     if ($operacao == 'incluir') {
-        echo "<br> >> Vamor incluir...<br>";
-        if ($quantidade == 0) {
-            ExecutaSQL($conn,
-                      " insert into  venda_produto 
-                           (fk_id_produto,fk_id_vendas,pedido) 
-                        values ($codigoProduto,$codigoCompra,1) "); 
-        } else {
-            ExecutaSQL($conn,
-                      " update  
-                           set quantidade = quantidade + 1 
-                        where 
-                           fk_id_vendas_produto = $codigoProduto and 
-                           fk_id_vendas = $codigoCompra "); 
-                       
-        }
+        
     } else 
     if ($operacao == 'excluir') {
         echo "<br> >> Vamor excluir...<br>";     

@@ -69,7 +69,7 @@
                     $estoque = pesquisar("estoque", "WHERE produto = {$infos['id']}");
                     if ($estoque[0]['quantidade'] >= 1) {
                     ?>
-                    <a> Adicionar ao Carrinho </a>
+                    <a href="carrinho?opc=incluir&produto=<?php echo $infos['id']?>"> Adicionar ao Carrinho </a>
                         Restam <?php echo $estoque[0]['quantidade'];?>
                     <?php
                     } else {
