@@ -58,6 +58,8 @@ body {
     margin: 10px;
     cursor: pointer;
     transition: 0.3s all ease;
+    text-decoration: none;
+    color: inherit;
 }
 
 .produtos .card a:hover {
@@ -81,7 +83,7 @@ body {
 .container .filtro, .filtro .quadradoFiltro {
     display: flex;
     justify-content: flex-start;
-    padding: 40px;
+    margin: 40px 280px;
 }
 
 .filtro .quadradoFiltro {
@@ -166,4 +168,7 @@ h3 {
     position: fixed;
     right: 61px;
     bottom: 21px;
+}
+.ada{
+    margin-right: 40px;
 }

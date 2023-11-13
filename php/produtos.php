@@ -16,6 +16,7 @@
     <title>Produtos | A+</title>
 
     <!-- LINKS -->
+    <link rel="icon" href="../img/fixos/logoBarra.png">
     <link rel="stylesheet" href="../css/produtos.css">
     <link rel="stylesheet" href="../css/styleBarra.css">
     <script type="text/javascript" src="../js/script.js"></script>

@@ -26,6 +26,7 @@
     <title>HOME | A+</title>
 
     <!-- LINKS -->
+   <link rel="icon" href="../img/fixos/logoBarra.png">
    <link rel="stylesheet" href="../css/home.css"> 
    <link rel="stylesheet" href="../css/styleBarra.css">
    <script type="text/javascript" src="../js/script.js"></script>
@@ -34,7 +35,7 @@
     <div id="barra"></div>
     <!-- BANNER CARROSSEL -->
     <div class="bannerHome">
-        <img src="../img/home/banner.png" alt="banner">
+        <img src="../img/home/banner2.png" alt="banner">
     </div>
         
     <div class="linha"></div>
@@ -87,7 +88,7 @@
     <!-- VIDEO E SOBRE A EMPRESA -->
     <div class="infoEmpresa">
         <div class="videoProdutos"> 
-            <iframe width="800" height="450" src="https://www.youtube.com/embed/DKQCSavXl94?si=Vsci0YTHxCVTstPy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="600" height="350" src="https://www.youtube.com/embed/DKQCSavXl94?si=Vsci0YTHxCVTstPy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <div class="sobreNos">
             <a>

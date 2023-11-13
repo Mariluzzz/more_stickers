@@ -9,13 +9,13 @@ body {
 /* BANNER */
 .bannerHome {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
+
     margin: 6.3em;
     margin-top: 2%;
     margin-bottom: 2%;
-    max-width: 100%;
+
 }
 
 /* DIVISORIA  */
@@ -108,7 +108,9 @@ h2 {
    margin: 10px;
    cursor: pointer;
    transition: 0.3s all ease;
+  text-decoration: none;
 }
+
 
 .produtosCarrossel .card a:hover {
     color: #ffffff;
@@ -204,7 +206,6 @@ h2 {
     position: fixed;
     right: 11px;
     bottom: 20px;
-    transform: rotate(-90deg);
 }
 
 .botaoHome a img{

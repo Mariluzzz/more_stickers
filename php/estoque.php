@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <title>Controle de Estoque</title>
     <link rel="stylesheet" href="../css/estoque.css">
+    <link rel="icon" href="../img/fixos/logoBarra.png">
 </head>
 <body>
     <div>

@@ -34,12 +34,11 @@ document.addEventListener("DOMContentLoaded", function() {
                         '</div>'+
                         '<nav>' +
                             '<li> <a href="home.php"> HOME </a> </li>'+
-                            '<li> <a href="../html/sobreNos.html"> SOBRE </a> </li>'+
+                            '<li> <a href="../php/sobreNos.php"> SOBRE </a> </li>'+
                             '<li>'+
                                 '<a href="produtos.php" id="client" class="button">PRODUTOS</a>'+
                                 adm +
                             '</li>'+
-                            '<li> <a href="#"> CONTATO </a> </li>'+
                         '</nav>'+
                         '<div class="imagensBarra">'+
                             '<a href="../php/carrinho.php"> <img src="../img/fixos/carrinho.svg" alt=""> </a>'+
@@ -53,16 +52,14 @@ document.addEventListener("DOMContentLoaded", function() {
     '</hmtl>';
 
     let rodape = '<div class="rodape">'+
-    '<footer class="footerMain container">'+
+    '<footer class="footerMain aleatorio">'+
         '<div class="footerConteudo">'+
             '<div class="footerColuna">'+
                 '<h3 class="tituloFooter"> Menu </h3>'+
                 '<ul>'+
-                    '<li><a href="#" title="Página Inícial">Página Inícial</a></li>'+
-                    '<li><a href="#" title="Sobre a Empresa">Sobre a Empresa</a></li>'+
-                    '<li><a href="#" title="Galeria de Fotos">Produtos</a></li>'+
-                    '<li><a href="#" title="Fale Conosco">Contato</a></li>'+
-                    '<li><a href="#" title="Ofertas">Ofertas</a></li>'+
+                    '<li><a href="../php/home.php" title="Página Inícial">Página Inícial</a></li>'+
+                    '<li><a href="../php/sobreNos.php" title="Sobre a Empresa">Sobre a Empresa</a></li>'+
+                    '<li><a href="../php/produtos.php" title="Galeria de Fotos">Produtos</a></li>'+
                 '</ul>'+
             '</div>'+
             '<div class="footerColuna">'+
