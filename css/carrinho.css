@@ -1,0 +1,64 @@
+body {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.titulo {
+    color: #ffffff;
+    padding: 10px;
+}
+
+.produto {
+    color: white;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.produto h3 {
+    color: #ffb700;
+}
+
+.finalizar {
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+}
+
+.txtFinalizar b {
+    color: white; 
+}
+
+.link a {
+    text-decoration: none;
+    color: #ffb700;
+}
+
+.link a:hover {
+    font-weight: 600;
+    color: white;
+}
+
+ /* BOTÕES FIXOS */
+.voltaTopo a img{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 11px;
+    bottom: 20px;
+}
+
+.botaoHome a img{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 61px;
+    bottom: 21px;
+}
+

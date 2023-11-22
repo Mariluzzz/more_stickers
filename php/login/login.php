@@ -33,7 +33,7 @@ if (isset($_SESSION['errorSession'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href = "../../css/login.css">
-    <title>Login lindo</title>
+    <title>A+ | Login</title>
 </head>
 
 <body id="divFundo">
@@ -68,7 +68,7 @@ if (isset($_SESSION['errorSession'])) {
                             <a href="../../html/cadastro.html">Realizar cadastro</a>
                         </div>
                         <div id="divForget" class="link">
-                            <a href="../html/esqueci.html">Esqueci a senha</a>
+                            <a href="../esqueci.php">Esqueci a senha</a>
                         </div>
                         <br>
                      

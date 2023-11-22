@@ -65,42 +65,6 @@ header .barraNavegacao nav li:hover > ul {
   display: block;
 }
 
-header .barraNavegacao .barraPesquisa input {
-  background: #ffffff;
-  border: 2px solid #5d1d88;
-  padding: 7px 10px;
-  border-radius: 50px;
-  width: 200px;
-  outline: 0;
-  color: #000000;
-}
-
-header .barraNavegacao .barraPesquisa input::placeholder {
-  color: #999;
-}
-
-header .barraNavegacao .barraPesquisa {
-  display: flex;
-}
-
-header .barraNavegacao .barraPesquisa button {
-  background: #ffffff;
-  color: #5d1d88;
-  border: 2px solid #5d1d88;
-  border-radius: 50px;
-  padding: 7px 15px;
-  margin-left: 10px;
-  cursor: pointer;
-  outline: 0;
-  font-weight: 700;
-  transition: 0.3s;
-}
-
-header .barraNavegacao .barraPesquisa button:hover {
-    background-color: #5d1d88;
-    color: #fff;
-}
-
 header .barraNavegacao .imagensBarra a {
   text-decoration: none;
 }
@@ -121,7 +85,7 @@ header .barraNavegacao .imagensBarra #sair{
 
 /* RESPONSIVO BARRA DE NAVEGAÇÃO */
 @media (max-width: 768px) {
-  header .barraNavegacao .barraPesquisa {
+  header .barraNavegacao {
     display: none;
   }
   

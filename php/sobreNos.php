@@ -1,6 +1,8 @@
-<?php
+<!--<?php
  include("../php/cabecario.php");
-?>
+ 
+ $_SESSION['sessaoAdmin'] = isset($_SESSION['sessaoAdmin']) ? $_SESSION['sessaoAdmin'] : '';
+?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,15 +38,14 @@
                 </div>
 
                 <!-- CARDS MISSAO, VISAO, VALORES  -->
-                <h1 class="titulo-oq"> </h1>
-                <main class="cards">
+                <div class="cards">
                     <section class="card">
                         <img src="../img/sobreNos/missao.svg" alt="">
                         <h3>Missão</h3>
                         <p> Nossa missão é oferecer uma ampla seleção de adesivos criativos, de alta qualidade afim de atender às necessidades<br>
                             individuais de nossos clientes. Estamos empenhados em fornecer um serviço excepcional, promovendo a autoexpressão<br>
                             e a conexão entre as pessoas. Buscamos constantemente inovação, enquanto promovemos a criatividade e a diversidade.</p>
-                    </section>
+                    </section> <br> <br>
                     <section class="card">
                         <img src="../img/sobreNos/visao.svg" alt="">
                         <h3> Visão </h3>
@@ -53,7 +54,7 @@
                             planeta, proporcionando aos nossos clientes uma variedade infinita de<br>
                             formas de expressar suas paixões e contar suas histórias por meio de
                             nossos adesivos.</p>
-                    </section>
+                    </section> <br> <br>
                     <section class="card">
                         <img src="../img/sobreNos/valores.svg" alt="">
                         <h3> Valores </h3>
@@ -62,9 +63,10 @@
                             Buscamos constantemente inovação, operando com integridade e transparência.
                         </p>
                     </section>
-                </main>
+                </div>
             </div>
-
+            </div>
+            <center>
             <!-- CLASSE PERFIS -->
             <div class="perfis">
                 <div class="imagensPerfil">
@@ -87,12 +89,12 @@
                 <p> Este trabalho foi realizado no Colégio Técnico Industrial Profº Isaac Portal Roldán, no ano de 2023
                     tendo por tutores os professores Débora Aires, Jovita Baenas, Marcelo Cabello.
             </div>
-        </div>
+            </center>
         <div id="footer"></div>
         <!-- BOTÕES CARRINHO/VOLTAR AO TOPO -->
     <div class="botoes">
         <div class="botaoCarrinho">
-            <a href="/"> <img src="../img/fixos/carrinhoOriginal.svg"> </a>
+            <a href="carrinho.php"> <img src="../img/fixos/carrinhoOriginal.svg"> </a>
         </div>
         <div class="voltaTopo">
             <a href="#"> <img src="../img/fixos/voltaTopo.svg"> </a>

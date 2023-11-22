@@ -43,7 +43,7 @@
                             $estoque = pesquisar("estoque", "WHERE produto = {$infos['id']}");
                             if ($estoque[0]['quantidade'] >= 1) {
                                 ?>
-                                <a> Adicionar ao Carrinho </a>
+                                <a href="carrinho.php?operacao=incluir&codigoProduto=<?php echo $infos['id']?>&quantidade=1"> Adicionar ao Carrinho </a>
                                     Restam <?php echo $estoque[0]['quantidade'];?>
                                 <?php
                             } else {
@@ -78,7 +78,7 @@
     <!-- BOTÕES CARRINHO/VOLTAR AO TOPO -->
     <div class="botoes">
         <div class="botaoCarrinho">
-            <a href="/"> <img src="../img/fixos/carrinhoOriginal.svg"> </a>
+        <a href="carrinho.php"> <img src="../img/fixos/carrinhoOriginal.svg"> </a>
         </div>
         <div class="voltaTopo">
             <a href="#"> <img src="../img/fixos/voltaTopo.svg"> </a>

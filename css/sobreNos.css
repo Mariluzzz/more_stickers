@@ -9,36 +9,21 @@ body {
 .container {
     padding: 40px;
     margin: 10px;
-    margin-left: 60px;
-    margin-right: 600px;
-}
-
-.titulo-oq {
-    font-size: 32px;
-    color: rgb(12, 12, 180);
-    font-weight: bolder;
-    margin-bottom: 40px;
-    margin-left: 450px;
-}
-
-main.cards {
     display: flex;
-    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    padding: 32px;
-    margin-bottom: 400px;
 }
 
-main.cards section.card img {
+.cards {
+    padding: 32px;
+}
+
+.cards section.card img {
     width: 100px;
 }
 
-main.cards section.card p {
-    max-width: 240px;
-}
-
-.card:first-child {
-    margin-left: 0px;
+.cards section.card p {
+    max-width: 500px;
 }
 
 .card {
@@ -60,7 +45,6 @@ main.cards section.card p {
     background-color: #181818;
     border: 1px solid #ffb700;
     border-radius: 8px;
-    margin-right: 11%;
     margin-left: 10%;
     box-shadow: -1px 2px 12px -2px #ffb700;
     -webkit-box-shadow: -1px 2px 12px -2px #ffb700;
@@ -86,7 +70,6 @@ main.cards section.card p {
 
 .perfis {
     display: block;
-    margin-top: -350px;
 }
 
 .perfis .imagensPerfil img {
@@ -121,7 +104,7 @@ main.cards section.card p {
     clear: right;
 } */
 
- /* BOTÃ•ES FIXOS */
+ /* BOTÕES FIXOS */
  .botaoCarrinho a img{
     width: 43px;
     height: 43px;

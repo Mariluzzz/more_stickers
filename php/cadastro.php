@@ -22,4 +22,9 @@ try {
     </script>
     <?php
 }
+	//header('Location: login/login.php');
 ?>
+	<script>
+    setTimeout(function() { alert("Cadastro concluído com sucesso!");
+    window.location.href = "login/login.php"; }, 0);
+    </script>

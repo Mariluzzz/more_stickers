@@ -110,7 +110,7 @@ section{
 } */
 
  /* BOTÕES FIXOS */
- .botaoCarrinho a img{
+.botaoCarrinho a img{
     width: 43px;
     height: 43px;
     position: fixed;

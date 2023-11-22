@@ -1,91 +1,99 @@
 body{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-#divFundo{
-    /* background: radial-gradient(circle, rgba(100,21,167,1) 27%, rgba(252,244,70,1)100%); */
-    background-color: black;
-}
-
-/* bagulhete escrito login */
-h1{
-    margin-top: 80px;
-    font-size: 45px;
-}
-
-/* mesma coisa que div so que com mais comando */
-section{
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
-    margin-top: 70px;
+    color: #ffb700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#divImg{
-
-    margin-top: -45px;
+.container {
+    margin: 2%;
+    margin-top: 2%;
+    padding: 2%;
+    border: 1px solid #ffb700;
+    border-radius: 10px;
+    text-align: center;
     display: flex;
-
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 300px;
+    background-color: #181818;
 }
 
-.divCampos{
-
-}
-
-.divCampos input{
-    width: 100%;
-    padding: 5 5px;
-    height: 40px;
-    border-radius: 7px;
-    font-size: 18px;
-    background: none;
-    border: 2px solid rgb(0, 0, 0);
-    outline: none;
-    color: rgb(0, 0, 0);
-}
-
-#divEnviar{
-    background-color: purple;
+.titulo {
     color: white;
-    padding: 8px 28px;
-    border: 1px solid white;
-    border-radius: 7px;
-    cursor: pointer;
-    transition: all .5s ease;
-    font-size: 18px;
-    margin-left: 50px;
+}
+
+.forms {
     margin-top: 20px;
 }
 
-a{
+.info {
+    background-color: #252525;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #5d1d88;
+    border-radius: 30px;
+    margin: 5px 0;
+}
+
+.link a {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #ffb700;
+}
+
+.link a:hover {
+    font-weight: 600;
     color: white;
 }
 
-#divEnviar:hover{
-    background-color: black;
-    color:white;
-}
-
-#divVersenha{
-    /* background-image: url(Login/olhoaberto.png); */
-    display: flex;
-    margin-top: -40px;
-    position: absolute;
-    margin-left: 460px;
+.button {
+    color: #5d1d88;
+    border: 2px solid #5d1d88;
+    border-radius: 30px;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    margin: 10px;
     cursor: pointer;
+    transition: 0.3s all ease;
+    text-decoration: none;
 }
 
-#divVersenha:hover{
-    /* background-image: url(olhofechado.png);*/
+.button:hover {
+    color: #ffffff;
+    background-color: #5d1d88;
 }
 
+ /* BOTÕES FIXOS */
+ .botaoCarrinho a img{
+    width: 43px;
+    height: 43px;
+    position: fixed;
+    right: 10px;
+    bottom: 70px;
+}
 
-/* #divQuadradao{
+.voltaTopo a img{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 11px;
+    bottom: 20px;
+}
 
-    background-color: aqua;
-    width: 50%;
-    display: flex;
-    height: 100%;
-   
-} */
+.botaoHome a img{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 61px;
+    bottom: 21px;
+}
+

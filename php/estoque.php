@@ -45,7 +45,7 @@
     <!-- BOTÕES CARRINHO/VOLTAR AO TOPO -->
     <div class="botoes">
         <div class="botaoCarrinho">
-            <a href="/"> <img src="../img/fixos/carrinhoOriginal.svg"> </a>
+        <a href="carrinho.php"> <img src="../img/fixos/carrinhoOriginal.svg"> </a>
         </div>
         <div class="voltaTopo">
             <a href="#"> <img src="../img/fixos/voltaTopo.svg"> </a>

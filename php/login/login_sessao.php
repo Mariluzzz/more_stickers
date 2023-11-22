@@ -7,7 +7,9 @@ include '../conexao/conexao.php';
 session_start();
 
 if ($_POST['usuario'] != '') {
+
     DefineCookie('loginCookie', $_POST['usuario'], 60); 
+
     $_SESSION['sessaoConectado'] = funcaoLogin($_POST, $admin); 
     $_SESSION['sessaoAdmin'] = $admin;   
 

@@ -133,7 +133,6 @@ body {
   position: fixed;
   right: 11px;
   bottom: 20px;
-  transform: rotate(-90deg);
 }
 
 .botaoHome a img{
